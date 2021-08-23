@@ -1,0 +1,74 @@
+// Place all the styles related to the stores controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content {
+  font-size: 56px;
+  letter-spacing: 12px;
+}
+
+
+.header-nav > .header-lists-right {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+span.header-content-color {
+  font-family: 'Kaushan Script', cursive;
+  color: #5c5c5c;
+}
+
+.stores-list-nav {
+  margin-right: 32px;
+  text-decoration: none;
+  color: #5c5c5c;
+}
+
+.user-name-nav {
+  margin-right: 32px;
+  text-decoration: none;
+  color: #5c5c5c;
+}
+
+.logout-nav {
+  margin-right: 32px;
+  text-decoration: none;
+  color: #5c5c5c;
+}
+
+.top-main-sauna {
+  background-image: image-url('3098876_m.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
+}
+
+.top-sauna-rgba {
+  height: 100%;
+  background: rgba(255,255,255,0.5);
+}
+
+.top-sauna-text {
+  margin: 100px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.caution {
+  font-size: 20px;
+  font-weight: bold;
+}

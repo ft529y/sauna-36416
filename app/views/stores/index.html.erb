@@ -1,0 +1,40 @@
+
+<main class="top-main-container">
+  <div class="top-main-sauna">
+    <div class="top-sauna-rgba">
+
+      <header class="header-container">
+        <div class="header-content"><span class="header-content-color">Saunner</span></div>
+        <div class="header-nav">
+          <ul class="header-lists-right">
+            <%# if user_signed_in? %>
+            <li><%= link_to "店舗一覧", "#", class: "stores-list-nav" %></li>
+            <li><%= link_to "◯◯さんでログイン中", "#", class: "user-name-nav" %></li>
+            <li><%= link_to "ログアウト", "#", class: "logout-nav"  %></li>
+            <%# else %>
+            <li><%#= link_to "店舗一覧", "#", class: "stores-list" %></li>
+            <li><%#= link_to "ログイン", "#", class: "login" %></li>
+            <li><%#= link_to "新規登録", "#", class: "sign-up" %></li>
+            <%# end %>
+          </ul>
+        </div>
+      </header>
+
+      <div class="top-sauna-text"></div>
+
+
+
+
+
+
+
+
+
+
+      <footer class="footer-container">
+        <div class="caution">※サウナに入る際はルールとマナーを守り、体調が悪い時は入浴を避けましょう。</div>
+      </footer>
+
+    </div>
+  </div>
+</main>
