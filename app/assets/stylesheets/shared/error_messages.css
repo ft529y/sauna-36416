@@ -1,0 +1,10 @@
+.error-alert {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.error-message {
+  font-size: 12px;
+  color: red;
+}

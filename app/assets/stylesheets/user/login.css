@@ -1,0 +1,29 @@
+.login-btn {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+
+.login-color:hover {
+  background-color:white;
+  color: #55b1df;
+}
+
+.login-color {
+  transition: all 0.5s;
+  background-color: #55b1df;
+  border: 1px solid #55b1df;
+  color: white;
+  border-radius: 30px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.login-flash-message {
+  font-size: 14px;
+  text-align: center;
+  color: red;
+  margin: 16px 0;
+}
