@@ -1,0 +1,107 @@
+<%= render "shared/header_logo" %>
+
+
+<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+<div class="form-wrap">
+  <div class="form-header">
+    <h1 class="form-header-text">
+      会員情報入力
+    </h1>
+  </div>
+
+  <%= render 'shared/error_messages', model: f.object %>
+
+
+<div class="notes"><i class="fas fa-hot-tub"></i><span class="notes-text">マークの箇所は入力必須となります。</span></div>
+
+<div class="form-item">
+  <div class="form-text-wrap">
+    <label class="form-text">ニックネーム</label>
+    <span><i class="fas fa-hot-tub"></i></span>
+  </div>
+  <%= f.text_area :nickname, class:"default-info", 
+  id:"nickname", placeholder:"例:  タロー", maxlength:"30", autofocus: true %>
+</div>
+
+<div class="form-item">
+  <div class="form-text-wrap">
+    <label class="form-text">メールアドレス</label>
+    <span><i class="fas fa-hot-tub"></i></span>
+  </div>
+  <%= f.email_field :email, class:"default-info", 
+  id:"email", placeholder:"例:  sample@co.jp" %>
+</div>
+
+<div class="form-item">
+  <div class="form-text-wrap">
+    <label class="form-text">パスワード</label>
+    <span><i class="fas fa-hot-tub"></i></span>
+  </div>
+  <%= f.password_field :password, class:"default-info", 
+  id:"password", placeholder:"6文字以上の半角英数字" %>
+  <p class="info-text">※英字、数字の両方を含めて設定してください</p>
+</div>
+
+<div class="form-item">
+  <div class="form-text-wrap">
+    <label class="form-text">パスワード確認</label>
+    <span><i class="fas fa-hot-tub"></i></span>
+  </div>
+  <%= f.password_field :password_confirmation, class:"default-info", id:"password-confirmation", placeholder:"同じパスワードを入力" %>
+</div>
+
+<div class="form-item">
+  <p class="personal-info">
+    本人情報入力
+  </p>
+  <p class="personal-info-text">
+    ここより下は本人情報の登録にご協力下さい。<br>尚、こちらで記入頂いた個人情報は他のお客様に公開されることはありません。
+  </p>
+</div>
+
+<div class="form-item">
+  <div class="form-text-wrap">
+    <label class="form-text">お名前(全角)</label>
+    <span><i class="fas fa-hot-tub"></i></span>
+  </div>
+  <div class="input-name-wrap">
+    <%= f.text_area :last_name, class:"input-name", 
+    id:"last-name", placeholder:"例:  山田" %>
+    <%= f.text_area :first_name, class:"input-name", 
+    id:"first-name", placeholder:"例:  太郎" %>
+  </div>
+</div>
+
+<div class="form-item">
+  <div class="form-text-wrap">
+    <label class="form-text">生年月日</label>
+    <span><i class="fas fa-hot-tub"></i></span>
+  </div>
+  <div class="input-birth-wrap">
+    <%= raw sprintf(
+                f.date_select(
+                  :birthday,
+                  class:'select-birth',
+                  id:"birth-date",
+                  use_month_numbers: true,
+                  prompt:'--',
+                  start_year: 1930,
+                  end_year: (Time.now.year - 10),
+                  date_separator: '%s'),
+                "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+  </div>
+  <p class="notes-info">※本人情報入力欄は正しい情報の入力をお願いします。</p>
+</div>
+
+<div class="register-btn">
+  <%= f.submit "会員登録", class:"register-color" %>
+</div>
+
+</div>
+<% end %>
+
+
+
+
+
+
