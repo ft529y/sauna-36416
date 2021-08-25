@@ -7,15 +7,15 @@
         <div class="header-content"><span class="header-content-color">Saunner</span></div>
         <div class="header-nav">
           <ul class="header-lists-right">
-            <%# if user_signed_in? %>
+            <% if user_signed_in? %>
             <li><%= link_to "店舗一覧", "#", class: "stores-list-nav" %></li>
-            <li><%= link_to "◯◯さんでログイン中", "#", class: "user-name-nav" %></li>
-            <li><%= link_to "ログアウト", "#", class: "logout-nav"  %></li>
-            <%# else %>
-            <li><%#= link_to "店舗一覧", "#", class: "stores-list" %></li>
-            <li><%#= link_to "ログイン", "#", class: "login" %></li>
-            <li><%#= link_to "新規登録", "#", class: "sign-up" %></li>
-            <%# end %>
+            <li><%= link_to "#{current_user.nickname}さんでログイン中", "#", class: "user-name-nav" %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout-nav"  %></li>
+            <% else %>
+            <li><%= link_to "店舗一覧", "#", class: "stores-list-nav" %></li>
+            <li><%= link_to "ログイン", new_user_session_path,  class: "login-nav" %></li>
+            <li><%= link_to "新規登録", new_user_registration_path , class: "sign-up-nav" %></li>
+            <% end %>
           </ul>
         </div>
       </header>
