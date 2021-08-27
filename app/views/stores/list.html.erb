@@ -1,7 +1,23 @@
 <%= render "shared/header_logo" %>
 
-<% @stores.each do |store| %>
-  <%= image_tag store.image %>
-  <%= store.store_name %>
-  <%= store.description %>
-<% end %>
+<div class="list-wrapper">
+  <div class="header-list-content">
+    <h2 class="header-list-text">
+      施設一覧画面
+    </h2>
+  </div>
+  <ul class="list-page-wrap">
+    <% @stores.each do |store| %>
+      <li class="list-list">
+        <div class="store-img-content">
+          <%= image_tag store.image.variant(resize: '500x500'), class: "store-img" %>
+        </div>
+        <div class="store-name-content">
+          <div class="name-content"><%= store.store_name %></div>
+          <div class="desc-content"><%= store.description %></div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
