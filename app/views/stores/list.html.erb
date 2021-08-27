@@ -1,0 +1,7 @@
+<%= render "shared/header_logo" %>
+
+<% @stores.each do |store| %>
+  <%= image_tag store.image %>
+  <%= store.store_name %>
+  <%= store.description %>
+<% end %>

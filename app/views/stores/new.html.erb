@@ -1,0 +1,56 @@
+<%= render "shared/header_logo" %>
+
+<%= form_with model: @store, url: stores_path, class: 'stores-new-main', local: true do |f| %>
+  <div class="new-form-wrap">
+    <div class="form-header">
+      <h1 class="new-form-header-text">
+        サウナ情報投稿
+      </h1>
+    </div>
+
+    <div class="notes"><i class="fas fa-hot-tub"></i><span class="notes-text">マークの箇所は入力必須となります。</span></div>
+
+    <%# 施設画像 %>
+    <div class="img-wrap">
+      <div class="new-font-letter">
+        施設画像
+        <span><i class="fas fa-hot-tub"></i></span>
+      </div>
+      <div class="img-upload">
+        <p>ファイルを選択し、アップロードしてください。</p>
+        <%= f.file_field :image, id:"store-item" %>
+      </div>
+    </div>
+
+    <%# 施設名 %>
+    <div class="new-stores">
+      <div class="new-font-letter">
+        施設名
+        <span><i class="fas fa-hot-tub"></i></span>
+      </div>
+      <%= f.text_area :store_name, class:"new-texts", id:"new-name", placeholder:"施設名を入力してください (30文字まで)", maxlength:"30" %>
+    </div>
+
+    <%# 施設説明文 %>
+    <div class="store-explain">
+      <div class="new-font-letter">
+        施設の紹介文
+        <span><i class="fas fa-hot-tub"></i></span>
+      </div>
+      <%= f.text_area :description, class:"new-texts-explain", id:"new-info", placeholder:"投稿する施設の紹介文を入力して下さい (1,000文字まで) (例) 温度が非常に高く、カラッとしたサウナです。発汗性は人によると思いますが、あまり高くないです。)" %>
+    </div>
+
+    <%# 注意事項 %>
+    <p class="stores-notes">
+      ※情報は的確に入力をお願い致します。<br>
+      不明確な情報と判断した場合、投稿を削除させていただく場合がございます。
+    </p>
+
+    <%# 送信ボタン %>
+    <div class="store-post-btn">
+      <%= f.submit "送信する", class:"post-btn" %>
+      <%= link_to 'TOPページへ戻る', root_path, class:"back-btn" %>
+    </div>
+
+  </div>
+<% end %>
