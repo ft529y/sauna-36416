@@ -1,0 +1,105 @@
+.stores-new-main {
+  display: flex;
+  justify-content: center;
+  background-color: #ffe4c4;
+  padding-bottom: 88px;
+}
+
+.new-form-wrap {
+  width: 60%;
+  background-color: white;
+  padding-bottom: 100px;
+}
+
+.new-form-header {
+  width: 100%;
+  text-align: center;
+}
+
+.new-form-header-text {
+  font-size: 24px;
+  line-height: 80px;
+  border-bottom: solid 2px skyblue ;
+}
+
+.img-wrap {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.new-font-letter {
+  font-weight: bold;
+  margin: 16px 0;
+}
+
+.img-upload > p {
+  margin-bottom: 16px;
+}
+
+.new-stores {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.new-texts {
+  width: 100%;
+  padding: 16px 8px 0 16px;
+  font-size: 18px;
+  border: 1px solid #d3d3d3;
+  resize: none;
+  margin: 0 -16px;
+}
+
+.store-explain {
+  width: 60%;
+margin: 0 auto;
+}
+
+.new-text-explain {
+  width: 100%;
+  padding: 16px 16px 8px;
+  font-size: 18px;
+  border: 1px solid #d3d3d3;
+  margin: 0 -16px;
+  resize: none;
+}
+
+.stores-notes {
+  width: 60%;
+  margin: 16px auto;
+}
+
+.store-btn {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-btn:hover {
+  background-color: white;
+  color: #55b1df;
+}
+
+.post-btn {
+  transition: all 0.5s;
+  background-color: #55b1df;
+  border: 1px solid #55b1df;
+  color: white;
+  border-radius: 30px;
+  width: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.back-btn {
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 16px;
+  color: black;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 30px;
+}

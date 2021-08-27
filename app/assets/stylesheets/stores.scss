@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  font-family: "Gill Sans", sans-serif;
+}
 
 
 .header-container {
@@ -29,6 +32,12 @@ span.header-content-color {
 
 .stores-list-nav {
   margin-right: 32px;
+  text-decoration: none;
+  color: #5c5c5c;
+}
+
+.new-store-nav {
+  margin: 32px;
   text-decoration: none;
   color: #5c5c5c;
 }
