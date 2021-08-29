@@ -13,7 +13,7 @@
           <%= image_tag store.image.variant(resize: '500x500'), class: "store-img" %>
         </div>
         <div class="store-name-content">
-          <div class="name-content"><%= store.store_name %></div>
+          <div class="name-content"><%= link_to store.store_name, store_path(store) %></div>
           <div class="desc-content"><%= store.description %></div>
         </div>
       </li>
