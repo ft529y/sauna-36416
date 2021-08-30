@@ -22,6 +22,8 @@
         <p>ファイルを選択し、アップロードしてください。</p>
         <%= f.file_field :image, id:"store-item" %>
       </div>
+      <br>
+      <div id="image-list"></div>
     </div>
 
     <%# 施設名 %>
@@ -53,6 +55,6 @@
       <%= f.submit "送信する", class:"post-btn" %>
       <%= link_to 'TOPページへ戻る', root_path, class:"back-btn" %>
     </div>
-
+    
   </div>
 <% end %>

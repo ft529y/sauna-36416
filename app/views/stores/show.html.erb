@@ -19,9 +19,9 @@
   <div class="comment-wrap">
     <div class="send-wrap">
       <% if user_signed_in? %>
-        <%= form_with(model: [@store, @comment], local: true) do |form| %>
-        <%= form.text_area :text, placeholder: "コメントする", class: "send-box", rows: "6" %>
-        <%= form.submit "コメント投稿する", class: "send-btn" %>
+        <%= form_with(model: [@store, @comment], local: true) do |f| %>
+        <%= f.text_area :text, placeholder: "コメントする", class: "send-box", rows: "6" %>
+        <%= f.submit "コメント投稿する", class: "send-btn" %>
         <% end %>
       <% end %>
     </div>
