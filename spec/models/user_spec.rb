@@ -15,7 +15,7 @@ RSpec.describe User, type: :model do
         @user.password_confirmation = @user.password
         expect(@user).to be_valid
       end
-      it 'passwordとpassword_confirmationは半角英大文字、半角英小文字、半角数字混合なら登録できる' do
+      it 'passwordとpassword_confirmationは半角英大文字、半角英小文字、半角数字混合なら登録できること' do
         @user.password = 'A1a1a1'
         @user.password_confirmation = @user.password
         expect(@user).to be_valid
@@ -23,12 +23,12 @@ RSpec.describe User, type: :model do
     end
 
     context 'ユーザー新規登録ができない時' do
-      it 'nicknameが空では登録できない' do
+      it 'nicknameが空では登録できないこと' do
         @user.nickname = ''
         @user.valid?
         expect(@user.errors.full_messages).to include "ニックネームを入力してください"
       end
-      it 'emailが空では登録できない' do
+      it 'emailが空では登録できないこと' do
         @user.email = ''
         @user.valid?
         expect(@user.errors.full_messages).to include "Eメールを入力してください"
