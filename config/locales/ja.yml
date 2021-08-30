@@ -6,7 +6,11 @@ ja:
         last_name: 苗字
         first_name: 名前
         birthday: 誕生日
+
       store:
         store_name: 施設名
         description: 紹介文
         image: 画像
+      
+      comment:
+        text: 文章

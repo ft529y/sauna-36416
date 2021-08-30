@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
    has_many :stores
-
+   has_many :comments
 
 
    with_options presence: true do
