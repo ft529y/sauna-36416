@@ -1,0 +1,37 @@
+<%= render "shared/header_logo" %>
+
+<div class="show-main-container">
+  <div class="detail-warp">
+    <div class="detail-img">
+      <%= image_tag @store.image, class: "img-detail" %>
+    </div>
+
+    <div class="detail-name">
+      <%= @store.store_name %>
+    </div>
+
+    <div class="detail-desc">
+      <span class="box-title">おすすめポイント!</span>
+      <p><%= @store.description %></p>
+    </div>
+  </div>
+
+  <div class="comment-wrap">
+    <div class="send-wrap">
+      <% if user_signed_in? %>
+        <%= form_with(model: [@store, @comment], local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "コメントする", class: "send-box", rows: "6" %>
+        <%= form.submit "コメント投稿する", class: "send-btn" %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <h3 class="comment-header-text">コメント一覧</h3>
+    <% @comments.each do |comment| %>
+      <div class="comment-detail">
+        <%= comment.user.nickname %>
+        <div class="baloon"><%= comment.text %></div>
+      </div>
+    <% end %>
+  </div>
+</div>
