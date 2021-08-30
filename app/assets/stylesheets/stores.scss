@@ -14,7 +14,8 @@ body {
 }
 
 .header-content {
-  font-size: 56px;
+  font-size: 64px;
+  padding-left: 16px;
   letter-spacing: 12px;
 }
 
@@ -84,12 +85,21 @@ span.header-content-color {
   margin: 100px;
 }
 
-footer {
+footer  {
   position: absolute;
   bottom: 0;
 }
 
 .caution {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
+}
+
+.footer-container {
+  width: 100%;
+}
+
+h4 {
+  text-align: center;
+  color: #5c5c5c;
 }
