@@ -103,3 +103,8 @@ margin: 0 auto;
   border: 1px solid black;
   border-radius: 30px;
 }
+
+#image-list > div > img {
+  width: 160px;
+  height: 90px;
+}
