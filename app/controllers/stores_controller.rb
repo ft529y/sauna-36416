@@ -18,11 +18,24 @@ class StoresController < ApplicationController
       render :new
     end
   end
+  
+  def show
+    @store = Store.find(params[:id])
+    @comment = Comment.new
+    @comments = @store.comments.includes(:user)
+  end
+
+
+
+
+
+
+
+
+
+
 end
 
-def show
-  @store = Store.find(params[:id])
-end
 
 private
 
