@@ -1,4 +1,6 @@
 class StoresController < ApplicationController
+  before_action :authenticate_user!, only: [:new]
+
   def index
   end
 
@@ -21,19 +23,8 @@ class StoresController < ApplicationController
   
   def show
     @store = Store.find(params[:id])
-    @comment = Comment.new
-    @comments = @store.comments.includes(:user)
+    @comments = @store.comments.includes(:user).order('created_at DESC')
   end
-
-
-
-
-
-
-
-
-
-
 end
 
 
