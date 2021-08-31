@@ -3,11 +3,15 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
+// const jqueryRaty = require("../jquery.raty")
+
 require("@rails/ujs").start()
 // require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require('../preview')
+window.$ = window.jQuery = require('jquery');
+require('packs/raty')
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
