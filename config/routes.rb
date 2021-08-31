@@ -5,6 +5,6 @@ Rails.application.routes.draw do
     collection do
       get 'list'
     end
-    resources :comments, only: :create
+    resources :comments, only: [:new, :create]
   end
 end
