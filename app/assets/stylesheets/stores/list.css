@@ -38,6 +38,11 @@
   margin-bottom: 64px;
 }
 
+.name-content > a {
+  color: #5c5c5c;
+  text-decoration: none;
+}
+
 .desc-content {
   font-size: 24px;
 }

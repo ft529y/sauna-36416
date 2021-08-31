@@ -44,35 +44,15 @@
   padding: 0;
 }
 
-
-
-.send-wrap {
-  margin: 32px 0;
-  margin: 0 auto;
-  width: 50vw;
-}
-
-.send-box {
-  font-size: 20px;
-  padding: 8px 8px;
-  width: 100%;
-  color: #5989cf;
-  background-color: #c6e4ff;
-  border-bottom: solid 6px #aac5de;
-  border-radius: 9px;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  resize: none;
-  outline: none;
-}
-
 .send-btn:hover {
   background-color: white;
   color: #55b1df;
 }
 
 .send-btn {
+  text-decoration: none;
+  text-align: center;
+  line-height: 56px;
   display: block;
   margin: 64px auto;
   transition: all 0.5s;
@@ -80,10 +60,15 @@
   border: 1px solid #55b1df;
   color: white;
   border-radius: 30px;
-  width: 50%;
-  height: 32px;
+  width: 33%;
+  height: 56px;
   cursor: pointer;
   font-size: 20px;
+}
+
+.border-line {
+  border: 1px solid white;
+  margin-bottom: 32px;
 }
 
 .comment-header-text {
@@ -95,6 +80,7 @@
   font-weight: bold;
   width: 10%;
   color: white;
+  text-align: center;
 }
 
 .comment-header-text::before {
@@ -124,13 +110,14 @@
 .baloon {
   position: relative;
   display: inline-block;
-  width: 200px; 
+  width: 300px; 
   text-align: center;
   color:#FFF;
   padding: 10px;
   margin-left: 32px;
-  background-color: #f39800;
+  background-color: white;
   border-radius: 5px;
+  border: 1px solid #62c1ce;
 }
 
 .baloon:before {
@@ -139,7 +126,7 @@
   display: block;
   z-index: 1;
   border-style: solid;
-  border-color: transparent #f39800;
+  border-color: transparent white;
   border-width: 10px 10px 10px 0;
   top: 50%;
   left: -10px;
@@ -147,6 +134,18 @@
 }
 
 .comment-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 24px 0;
-  text-align: center;
+}
+
+.date-time {
+  color: black;
+}
+
+.comment-txt {
+  text-align: left;
+  padding-bottom: 16px;
+  color: black;
 }
