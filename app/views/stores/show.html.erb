@@ -16,22 +16,37 @@
     </div>
   </div>
 
-  <div class="comment-wrap">
-    <div class="send-wrap">
-      <% if user_signed_in? %>
-        <%= form_with(model: [@store, @comment], local: true) do |f| %>
-        <%= f.text_area :text, placeholder: "コメントする", class: "send-box", rows: "6" %>
-        <%= f.submit "コメント投稿する", class: "send-btn" %>
-        <% end %>
-      <% end %>
-    </div>
-
-    <h3 class="comment-header-text">コメント一覧</h3>
-    <% @comments.each do |comment| %>
-      <div class="comment-detail">
-        <%= comment.user.nickname %>
-        <div class="baloon"><%= comment.text %></div>
-      </div>
+<div class="comment-wrap">
+  <div class="send-warp">
+    <% if user_signed_in? %>
+      <%= link_to "コメント投稿する", new_store_comment_path(@store), class: "send-btn" %>
     <% end %>
   </div>
+
+  <div class="border-line"></div>
+
+  <h3 class="comment-header-text">コメント一覧</h3>
+    <% @comments.each do |comment| %>
+      <div class="comment-detail">
+        <div class="nicknamae-user"><%= comment.user.nickname %></div>
+        <div class="baloon">
+          <div class="date-time"><%= comment.created_at.strftime("%Y-%m-%d %H:%M:%S") %></div>
+          <br>
+          <div class="comment-txt"><%= comment.text %></div>
+          <div class="star-icon" id="star-rate-<%= comment.id %>"></div>
+            <script>
+            $('#star-rate-<%= comment.id %>').raty({
+              size: 36,
+              starOff:  '<%= asset_path('star-off.png') %>',
+              starOn : '<%= asset_path('star-on.png') %>',
+              starHalf: '<%= asset_path('star-half.png') %>',
+              half: true,
+              readOnly: true,
+              score: <%= comment.evaluation %>,
+            });
+            </script>
+        </div>
+      </div>
+
+    <% end %>
 </div>
