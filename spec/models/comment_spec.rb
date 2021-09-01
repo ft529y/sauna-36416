@@ -9,7 +9,7 @@ RSpec.describe Comment, type: :model do
 
   describe 'コメント投稿機能' do
     context 'コメント投稿できる時' do
-      it 'textが存在すればコメント登録できること' do
+      it 'text,evaluationが存在すればコメント登録できること' do
         expect(@comment).to be_valid
       end
     end
@@ -18,6 +18,11 @@ RSpec.describe Comment, type: :model do
         @comment.text = ''
         @comment.valid?
         expect(@comment.errors.full_messages).to include("文章を入力してください")
+      end
+      it 'evaluationが0では登録できないこと' do
+        @comment.evaluation = 0
+        @comment.valid?
+        expect(@comment.errors.full_messages).to include "評価を入力して下さい。"
       end
     end
   end
