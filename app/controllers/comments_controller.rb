@@ -8,8 +8,12 @@ class CommentsController < ApplicationController
   end
 
   def create
-    comment = Comment.create(comment_params)
-    redirect_to "/stores/#{comment.store.id }"
+    @comment = Comment.new(comment_params)
+    if @comment.save
+      redirect_to "/stores/#{@comment.store.id }"
+    else
+      render :new
+    end
   end
 
 
