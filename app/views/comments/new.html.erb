@@ -3,7 +3,8 @@
 <div class="comment-wrap">
   <div class="send-wrap">
       <% if user_signed_in? %>
-        <%= form_with(model: [@store, @comment], local: true) do |f| %>
+        <%= form_with(model: [@store, @comment], url: store_comments_path, local: true) do |f| %>
+        <%= render 'shared/error_messages', model: f.object %>
         <%= f.text_area :text, placeholder: "コメントする", class: "send-box", rows: "6" %>
         <div class="form-group row" id="star">
           <div class="evaluation-text"><%= f.label :star,'評価 ', class:'col-md-3 col-form-label' %></div>
