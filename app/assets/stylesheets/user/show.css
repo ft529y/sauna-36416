@@ -1,0 +1,66 @@
+.user-head-text {
+  text-align: center;
+  font-size: 40px;
+  color: #5c5c5c;
+  margin-bottom: 48px;
+}
+
+.user-detail-name {
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.user-name {
+  margin-right: 24px;
+}
+
+.user-detail-birth {
+  line-height: 16px;
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.user-birth {
+  margin-right: 24px;
+}
+
+.user-detail-nickname {
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.user-nickname {
+  margin-right: 24px;
+}
+
+.user-detail-email {
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.user-email {
+  margin-right: 24px;
+}
+
+.withdrawal {
+  margin-top: 60px;
+  width: 75%;
+  text-align: right;
+}
+
+.withdrawal-btn:hover {
+  color: red;
+}
+
+.withdrawal-btn {
+  transition: 0.5s;
+  text-decoration: none;
+  color: black;
+}
