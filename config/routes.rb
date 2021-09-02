@@ -7,4 +7,7 @@ Rails.application.routes.draw do
     end
     resources :comments, only: [:new, :create]
   end
+  resources :users, only: :show
+  get '/users/:id/unsubscribe' => 'users#unsubscribe', as: 'unsubscribe'
+  patch '/users/:id/withdrawal' => 'users#withdrawal', as: 'withdrawal'
 end
