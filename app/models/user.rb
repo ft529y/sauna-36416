@@ -20,5 +20,9 @@ class User < ApplicationRecord
 
    VALID_PASSWORD_REGEX =/\A(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[\d])\w{6,12}\z/
    validates :password,
-   format: { with: VALID_PASSWORD_REGEX, message: 'は無効です 6~12字以内で半角の英大文字、英小文字、数字のみを含んでいる必要があります' }
+   format: { with: VALID_PASSWORD_REGEX, message: 'は無効です 6~12字以内で半角の英大文字、英小文字、数字のみを含んでいる必要があります' },allow_nil: true
+
+   def active_for_authentication?
+    super && (is_deleted == false)
+   end
 end

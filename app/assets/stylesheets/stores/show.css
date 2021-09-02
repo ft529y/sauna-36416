@@ -133,6 +133,10 @@
   margin-top: -10px;
 }
 
+.nickname-user {
+  width: 8%;
+}
+
 .comment-detail {
   display: flex;
   justify-content: center;

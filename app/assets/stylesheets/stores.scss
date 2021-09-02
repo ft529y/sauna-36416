@@ -8,6 +8,10 @@ body {
   height: 100vh;
 }
 
+.notification {
+  text-align: center;
+}
+
 
 .header-container {
   display: flex;
@@ -21,6 +25,10 @@ body {
   letter-spacing: 12px;
 }
 
+.main-text {
+  text-decoration: none;
+  color: #5c5c5c;
+}
 
 .header-nav > .header-lists-right {
   display: flex;
