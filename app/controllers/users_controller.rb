@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:show, :unsubscribe, :withdrawal]
-
   require 'date'
+
+  def index
+  end
+
   def show
   end
 
