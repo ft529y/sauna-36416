@@ -1,0 +1,24 @@
+<main class="quiz-background">
+<div class="header-content-quiz">
+  <span class="header-content-color"><%=link_to "Saunner", root_path, class: "main-text" %>
+  </span>
+</div>
+
+  <section class="quiz-text-head">
+    <div class="quiz-heading">
+      3択クイズ挑戦中！！
+    </div>
+  </section>
+
+  <section class="quiz-container">
+    <p id="question"></p>
+    <ul id="choices"></ul>
+    <div id="btn" class="disabled">NEXT</div>
+
+    <section id="result" class="hidden">
+      <p></p>
+      <a href="">もう1回トライ！</a>
+      <a href="/stores" class="result-under-text"><h5>TOPページへ戻る<h5></a>
+    </section>
+  </section>
+</main>
