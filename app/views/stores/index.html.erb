@@ -1,10 +1,14 @@
-
 <main class="top-main-container">
   <div class="top-main-sauna">
     <div class="top-sauna-rgba">
 
       <header class="header-container">
-        <div class="header-content"><span class="header-content-color"><%= link_to "Saunner", root_path, class: "main-text" %></span></div>
+        <div class="header-content">
+          <span class="header-content-color">
+            <%= link_to "Saunner", root_path, class: "main-text" %>
+          </span>
+        </div>
+
         <div class="header-nav">
           <ul class="header-lists-right">
             <% if user_signed_in? %>
@@ -21,12 +25,37 @@
         </div>
       </header>
 
-      <div class="top-sauna-text"></div>
+      <div class="top-sauna-text">
+        <h1 class="question">サウナについて知ろう！！</h1>
+        <dl>
+          <div>
+            <dt>サウナとは？</dt>
+            <dd>サウナとはフィンランド発祥の蒸し風呂です。また、サウナ風呂とも言われることもあります。サウナストーンと呼ばれる石をたくさん乗せたストーブを熱し、その熱と石に水をかけて発生する蒸気を利用し温度・湿度を調整します。室内の温度は50度~120度以上まであり、サウナの種類も多岐にわたります。</dd>
+          </div>
+
+          <div>
+            <dt>整うとは？</dt>
+            <dd>昨今、ブームとなっている、整うとは一種の陶酔感を指します。「整う」には絶対に欠かせないサイクルが存在します。それは「サウナ」、「水風呂」、「外気浴」です。これらを繰り返すことで、交感神経が刺激され、血流が良くなることで陶酔感を得やすくなります。だいたい3セット繰り返すのが良いと言われています。</dd>
+          </div>
+
+          <div>
+            <dt>サウナに入る際は注意が必要？</dt>
+            <dd>体調がすぐれない時や、飲酒後の入浴は控えましょう。また、サウナでは体内の水分を大量に消費するので脱水症状等にならないよう水分補給はこまめにとりましょう。1セットでサウナに入る時間は個人差によりますが6分~12分が目安と言われています。</dd>
+          </div>
+        </dl>
+    </div>
+
+    <div class="sauna-quiz">
+      <div class="sauna-top-text">
+        「サウナ」や「整う」ことについて詳しくなろう！
+      </div>
+      <div class="route">↓↓</div>
+      <%= link_to "サウナクイズに挑戦！！", users_path %>
+    </div>
 
       <footer class="footer-container">
         <div class="caution">※サウナに入る際はルールとマナーを守り、体調が悪い時は入浴を避けましょう。</div>
         <div class="copy-rights"><%= render "shared/footer_logo"%></div>
       </footer>
-    </div>
   </div>
 </main>
