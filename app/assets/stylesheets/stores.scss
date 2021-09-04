@@ -25,6 +25,11 @@ body {
   letter-spacing: 12px;
 }
 
+.app-logo img {
+  width: 80px;
+  border-radius: 20px;
+}
+
 .main-text {
   text-decoration: none;
   color: #5c5c5c;
@@ -86,6 +91,15 @@ span.header-content-color {
   width: 100vw;
 }
 
+.quiz-background {
+  background-image: image-url('4527053_m.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
+}
+
 .top-sauna-rgba {
   height: 100%;
   background: rgba(255,255,255,0.5);
@@ -94,6 +108,99 @@ span.header-content-color {
 .top-sauna-text {
   margin: 100px;
 }
+
+.question {
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+
+dl > div {
+  margin-bottom: 8px;
+}
+
+dt {
+  padding: 8px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+dt::before {
+  content: 'Q. ';
+}
+
+dt::after {
+  content: '☟';
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  transition: transform .3s;
+}
+
+dl > div.appear dt::after {
+  transform: rotate(45deg);
+}
+
+dd {
+  padding: 8px;
+  display: none;
+}
+
+dd::before {
+  content: 'A. ';
+  color: red;
+}
+
+dl > div.appear dd {
+  display: block;
+  animation: .3s fadeIn;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.sauna-quiz {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.sauna-quiz a:hover {
+  background-color: white;
+  color: #55b1df;
+}
+
+.sauna-quiz a {
+  transition: all 0.5s;
+  background-color: #55b1df;
+  border: 1px solid #55b1df;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  padding: 8px 32px;
+  font-size: 24px;
+}
+
+.sauna-top-text {
+  font-weight: bold;
+}
+
+.route {
+  padding-bottom: 8px;
+  color: crimson;
+  font-size: 20px;
+}
+
 
 footer  {
   position: absolute;

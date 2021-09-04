@@ -10,6 +10,8 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 require('../preview')
+require('../top')
+require('../quiz')
 window.$ = window.jQuery = require('jquery');
 require('packs/raty')
 

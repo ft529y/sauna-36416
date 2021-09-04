@@ -11,6 +11,10 @@
   margin-bottom: 40px;
 }
 
+.list-text-head {
+  font-size: 16px;
+}
+
 .store-img {
   width: 50vw;
   height: 100%;
@@ -41,6 +45,10 @@
 .name-content > a {
   color: #5c5c5c;
   text-decoration: none;
+}
+
+.name-content > a:hover {
+  color: #55b1df;
 }
 
 .desc-content {
