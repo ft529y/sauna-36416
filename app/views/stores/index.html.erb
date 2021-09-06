@@ -12,12 +12,12 @@
         <div class="header-nav">
           <ul class="header-lists-right">
             <% if user_signed_in? %>
-            <li><%= link_to "店舗一覧", list_stores_path, class: "stores-list-nav" %></li>
+            <li><%= link_to "サウナ施設一覧", list_stores_path, class: "stores-list-nav" %></li>
             <li><%= link_to "サウナ情報投稿", new_store_path, class: "new-store-nav" %></li>
             <li><%= link_to "マイページ", user_path(current_user.id), class: "user-name-nav" %></li>
             <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout-nav"  %></li>
             <% else %>
-            <li><%= link_to "店舗一覧", list_stores_path, class: "stores-list-nav" %></li>
+            <li><%= link_to "サウナ施設一覧", list_stores_path, class: "stores-list-nav" %></li>
             <li><%= link_to "ログイン", new_user_session_path,  class: "login-nav" %></li>
             <li><%= link_to "新規登録", new_user_registration_path , class: "sign-up-nav" %></li>
             <% end %>
@@ -25,8 +25,10 @@
         </div>
       </header>
 
+      <%= link_to image_tag("n.png", class: "app-logo"), root_path %>
+
       <div class="top-sauna-text">
-        <h1 class="question">サウナについて知ろう！！</h1>
+        <h1 class="question">サウナについて知ろう！！<span class="small-question">(各文章をクリックすると詳細が表示されます。)</span></h1>
         <dl>
           <div>
             <dt>サウナとは？</dt>
