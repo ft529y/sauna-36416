@@ -9,18 +9,36 @@
   justify-content: space-around;
 }
 
+.withdrawal-btn {
+  width: 150px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 32px;
+}
+
 .withdrawal-btn a:hover {
   color: red;
 }
 
 .withdrawal-btn a {
+  display: block;
+  text-align: center;
   transition: 0.5s;
   text-decoration: none;
   font-size: 24px;
   color: black;
 }
 
+.no-withdrawal-btn {
+  width: 150px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 32px;
+}
+
 .no-withdrawal-btn a {
+  display: block;
+  text-align: center;
   text-decoration: none;
   font-size: 24px;
   color: black;

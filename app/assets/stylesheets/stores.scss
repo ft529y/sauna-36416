@@ -20,14 +20,7 @@ body {
 }
 
 .header-content {
-  font-size: 64px;
-  padding-left: 16px;
-  letter-spacing: 12px;
-}
-
-.app-logo img {
-  width: 80px;
-  border-radius: 20px;
+  padding: 24px 0 0 24px;
 }
 
 .main-text {
@@ -39,6 +32,12 @@ body {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
+}
+
+.app-logo {
+  width: 150px;
+  border-radius: 150px;
+  border: 3px solid #5c5c5c;
 }
 
 span.header-content-color {
@@ -53,7 +52,7 @@ span.header-content-color {
 }
 
 .new-store-nav {
-  margin: 32px;
+  margin-right: 32px;
   text-decoration: none;
   color: #5c5c5c;
 }
@@ -115,6 +114,11 @@ span.header-content-color {
   border-bottom: 1px solid;
   padding: 8px 16px;
   margin-bottom: 16px;
+}
+
+.small-question {
+  font-size: 14px;
+  font-weight: normal;
 }
 
 dl > div {
