@@ -1,12 +1,10 @@
 .shared-header-content {
-  font-size: 56px;
-  letter-spacing: 12px;
   text-align: center;
-  background-color: #ffe4c4;
+  padding-top: 24px;
 }
 
-.shared-header-content-color {
-  font-family: 'Kaushan Script', cursive;
-  color: #5c5c5c;
-  text-decoration: none;
+.app-common-logo {
+  width: 150px;
+  border-radius: 150px;
+  border: 3px solid #5c5c5c;
 }

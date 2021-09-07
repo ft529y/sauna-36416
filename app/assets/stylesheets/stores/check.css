@@ -1,0 +1,31 @@
+.check-wrap {
+  text-align: center;
+}
+
+.check-text {
+  margin: 240px 0;
+}
+
+.check-text-top {
+  font-size: 32px;
+  color: green;
+}
+
+.check-text-bottom {
+  margin-top: 16px;
+}
+
+.back-top-page {
+  width: 170px;
+  height: 48px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 32px;
+  margin: 0 auto;
+}
+
+.back-text  {
+  line-height: 48px;
+  text-decoration: none;
+  color: black;
+}

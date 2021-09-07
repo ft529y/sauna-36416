@@ -5,6 +5,10 @@
   margin-bottom: 48px;
 }
 
+.user-detail-head {
+  margin-top: 24px;
+}
+
 .user-detail-name {
   display: flex;
   justify-content: center;
@@ -55,11 +59,11 @@
   text-align: right;
 }
 
-.withdrawal-btn:hover {
+.show-withdrawal-btn:hover {
   color: red;
 }
 
-.withdrawal-btn {
+.show-withdrawal-btn {
   transition: 0.5s;
   text-decoration: none;
   color: black;

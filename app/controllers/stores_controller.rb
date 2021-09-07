@@ -15,10 +15,13 @@ class StoresController < ApplicationController
   def create
     @store = Store.new(store_params)
     if @store.save
-      redirect_to root_path
+      redirect_to check_stores_path
     else
       render :new
     end
+  end
+
+  def check
   end
   
   def show
