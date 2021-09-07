@@ -3,13 +3,21 @@
 }
 
 .check-text {
+  margin: 240px 0;
+}
+
+.check-text-top {
   font-size: 32px;
-  height: 300px;
-  line-height: 300px;
+  color: green;
+}
+
+.check-text-bottom {
+  margin-top: 16px;
 }
 
 .back-top-page {
-  width: 150px;
+  width: 170px;
+  height: 48px;
   background-color: white;
   border: 1px solid black;
   border-radius: 32px;
@@ -17,6 +25,7 @@
 }
 
 .back-text  {
+  line-height: 48px;
   text-decoration: none;
   color: black;
 }
