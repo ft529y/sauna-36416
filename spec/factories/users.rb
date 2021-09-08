@@ -7,5 +7,6 @@ FactoryBot.define do
     last_name             {Faker::Name.last_name}
     first_name            {Faker::Name.first_name}
     birthday              {'2000-01-01'}
+    is_deleted            {0}
   end
 end

@@ -7,7 +7,7 @@ RSpec.describe User, type: :model do
 
   describe 'ユーザー新規登録' do
     context 'ユーザーが新規登録できる時' do
-      it 'nickname,email,password,password_confirmation,last_name,first_name,birthdayが存在すれば登録できること' do
+      it 'nickname,email,password,password_confirmation,last_name,first_name,birthday,is_deletedが存在すれば登録できること' do
         expect(@user).to be_valid
       end
       it 'passwordとpassword_confirmationが6文字以上12文字以内なら登録できること' do
@@ -112,10 +112,15 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include "名前は全角文字を入力して下さい"
       end
-      it 'birthdayが空では登録できないこと' do
+      it 'birthdayがnilでは登録できないこと' do
         @user.birthday = nil
         @user.valid?
         expect(@user.errors.full_messages).to include "誕生日を入力してください"
+      end
+      it 'is_deletedがnilでは登録できないこと' do
+        @user.is_deleted = nil
+        @user.valid?
+        expect(@user.errors.full_messages).to include "退会判別コードは一覧にありません"
       end
     end
   end
