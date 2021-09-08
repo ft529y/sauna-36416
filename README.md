@@ -50,6 +50,19 @@ password : B2b2b2
 - 3択クイズ機能
 [![Image from Gyazo](https://i.gyazo.com/5f8f0e4c143706ccb9126d12eaca573d.gif)](https://gyazo.com/5f8f0e4c143706ccb9126d12eaca573d)
 
+# 工夫したポイント
+- コメント機能だけでなく、星形の段階評価を実装することでより、評価をわかりやすくした。
+- 3択クイズ機能は終了時にJavaScriptで動きを加えて表示させた。
+
+# 実装予定の機能
+- サウナ施設の住所情報等を加えることでより、実用性のあるアプリにする。
+- 検索機能を導入し、サウナ施設の検索ができるようにする。
+- マイページから自信がコメントした投稿履歴を閲覧できるようにする。
+
+# データベース設計
+### ER図
+![sauna-er](https://user-images.githubusercontent.com/87511321/132481489-aa53fb8f-d4e0-49c3-bbec-2d40b21bee88.png)
+
 
 
 # テーブル設計
@@ -116,3 +129,23 @@ has_one_attached :image
 ### Association
 belongs_to :user
 belongs_to :store
+
+# ローカルでの動作方法
+```ターミナル
+% git clone https://github.com/ft529y/sauna-36416.git 
+% cd sauna-36416
+% bundle install
+% rails db:create
+% rails db:migrate
+$ rails s
+→http://localhost:3000
+```
+
+# 開発環境
+- フロントエンド：HTML5/CSS/SCSS/JavaScript/jQuery Raty
+- バックエンド：Ruby on Rails(6.0.4.1)/Ruby(2.6.5)/JavaScript
+- テスト：RSpec
+- Linter：Rubocop
+- データベース：MySQL(5.6.51)/Sequel Pro
+- インフラ：Heroku
+- タスク管理：GitHub
