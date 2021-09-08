@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :store do
-    store_name            {'サウナ'}
-    description           {'サウナはとても気持ちいいです。'}
+    store_name            { 'サウナ' }
+    description           { 'サウナはとても気持ちいいです。' }
     association :user
 
     after(:build) do |store|

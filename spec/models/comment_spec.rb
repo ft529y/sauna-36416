@@ -17,12 +17,12 @@ RSpec.describe Comment, type: :model do
       it '文章が存在しなければコメント登録できないこと' do
         @comment.text = ''
         @comment.valid?
-        expect(@comment.errors.full_messages).to include("文章を入力してください")
+        expect(@comment.errors.full_messages).to include('文章を入力してください')
       end
       it 'evaluationが0では登録できないこと' do
         @comment.evaluation = 0
         @comment.valid?
-        expect(@comment.errors.full_messages).to include "評価を入力して下さい。"
+        expect(@comment.errors.full_messages).to include '評価を入力して下さい。'
       end
     end
   end

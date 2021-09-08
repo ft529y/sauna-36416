@@ -23,13 +23,12 @@ class StoresController < ApplicationController
 
   def check
   end
-  
+
   def show
     @store = Store.find(params[:id])
     @comments = @store.comments.includes(:user).order('created_at DESC')
   end
 end
-
 
 private
 

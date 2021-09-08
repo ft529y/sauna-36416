@@ -25,27 +25,27 @@ RSpec.describe Store, type: :model do
       it 'store_nameが空では投稿できないこと' do
         @store.store_name = ''
         @store.valid?
-        expect(@store.errors.full_messages).to include "施設名を入力してください"
+        expect(@store.errors.full_messages).to include '施設名を入力してください'
       end
       it 'descriptionが空では投稿できないこと' do
         @store.description = ''
         @store.valid?
-        expect(@store.errors.full_messages).to include "紹介文を入力してください"
+        expect(@store.errors.full_messages).to include '紹介文を入力してください'
       end
       it 'imageが空では投稿できないこと' do
         @store.image = nil
         @store.valid?
-        expect(@store.errors.full_messages).to include "画像を入力してください"
+        expect(@store.errors.full_messages).to include '画像を入力してください'
       end
       it 'store_nameが31文字以上では投稿できないこと' do
         @store.store_name = 'あ' * 31
         @store.valid?
-        expect(@store.errors.full_messages).to include "施設名は30文字以内で入力してください"
+        expect(@store.errors.full_messages).to include '施設名は30文字以内で入力してください'
       end
       it 'descriptionが131文字以上では投稿できないこと' do
         @store.description = 'あ' * 131
         @store.valid?
-        expect(@store.errors.full_messages).to include "紹介文は130文字以内で入力してください"
+        expect(@store.errors.full_messages).to include '紹介文は130文字以内で入力してください'
       end
     end
   end

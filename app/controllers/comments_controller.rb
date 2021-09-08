@@ -4,19 +4,16 @@ class CommentsController < ApplicationController
   def new
     @store = Store.find(params[:store_id])
     @comment = Comment.new
-  
   end
 
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
-      redirect_to "/stores/#{@comment.store.id }"
+      redirect_to "/stores/#{@comment.store.id}"
     else
       render :new
     end
   end
-
-
 
   private
 
