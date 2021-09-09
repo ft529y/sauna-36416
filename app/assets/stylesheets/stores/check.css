@@ -26,6 +26,9 @@
 }
 
 .back-text  {
+  display: inline-block;
+  width: 170px;
+  border-radius: 32px;
   line-height: 48px;
   text-decoration: none;
   color: black;
