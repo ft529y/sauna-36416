@@ -20,7 +20,7 @@ email : sample@gmail.com
 password : A1a1a1  
 
 - 資格保有ユーザー②  
-email : sauuner@gmail.com  
+email : saunner@gmail.com  
 password : B2b2b2
 
 # 利用方法
