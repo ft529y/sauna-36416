@@ -6,6 +6,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
+    @comments = @user.comments.includes(:store).order('created_at')
   end
 
   def unsubscribe
