@@ -9,54 +9,32 @@
   margin-top: 24px;
 }
 
-.user-detail-name {
-  display: flex;
-  justify-content: center;
-  font-size: 32px;
-  margin-bottom: 32px;
+.detail-table {
+  margin: 0 auto;
 }
 
-.user-name {
-  margin-right: 24px;
+.detail-list-user {
+  width: 20%;
+  text-align: center;
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 16px;
 }
 
-.user-detail-birth {
-  line-height: 16px;
-  display: flex;
-  justify-content: center;
-  font-size: 32px;
-  margin-bottom: 32px;
-}
-
-.user-birth {
-  margin-right: 24px;
-}
-
-.user-detail-nickname {
-  display: flex;
-  justify-content: center;
-  font-size: 32px;
-  margin-bottom: 32px;
-}
-
-.user-nickname {
-  margin-right: 24px;
-}
-
-.user-detail-email {
-  display: flex;
-  justify-content: center;
-  font-size: 32px;
-}
-
-.user-email {
-  margin-right: 24px;
+.detail-name-user {
+  width: 80%;
+  text-align: center;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid black;
+  padding: 16px;
 }
 
 .withdrawal {
   margin-top: 60px;
   width: 75%;
   text-align: right;
+  margin-bottom: 100px;
 }
 
 .show-withdrawal-btn:hover {
@@ -64,7 +42,74 @@
 }
 
 .show-withdrawal-btn {
+  font-size: 16px;
   transition: 0.5s;
   text-decoration: none;
   color: black;
+}
+
+
+
+
+
+
+
+.user-show-top {
+  margin-bottom: 13em;
+  position: relative;
+  width: 100%;
+  /* background-color: #444; */
+}
+
+.user-show-list {
+  padding-left: 48px;
+}
+
+.user-show-list > .show-list {
+  display: inline-block;
+  /* padding: 15px 30px; */
+  /* display: block; */
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
+.list-detail > .list-single > a{
+  padding: 15px 30px;
+  display: block;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
+.user-show-list > .show-list:hover {
+  color: blue;
+}
+
+.list-detail{
+  position: absolute;
+  top: 18px;
+  left: 18px;
+}
+
+.list-single{
+  display: block;
+}
+
+.list-single a{
+  background-color: #efefef;
+  color: #444;
+  text-decoration: none;
+}
+
+.list-single a:hover{
+  background-color: #ddd;
+}
+
+.list-detail{
+  display: none;
+}
+
+.show-list:hover .list-detail{
+  display: block;
 }
