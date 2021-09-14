@@ -1,0 +1,39 @@
+<%= render "shared/header_logo" %>
+
+<div class="post-page-wrap">
+  <div class="post-comment-head">
+    <h1 class="post-comment-letter">コメント一覧ページ</h1>
+  </div>
+
+  <div class="post-wrap">
+    <div class="post-comment">
+      <% @comments.each do |comment| %>
+        <div>
+          投稿した施設名 : <%= comment.store.store_name %>
+        </div>
+
+          <div>
+            <%= comment.text %>
+          </div>
+
+          <div>
+            <%= comment.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
+          </div>
+
+          <div class="star-icon" id="star-rate-<%= comment.id %>">
+          </div>
+            <script>
+            $('#star-rate-<%= comment.id %>').raty({
+              size: 36,
+              starOff:  '<%= asset_path('star-off.png') %>',
+              starOn : '<%= asset_path('star-on.png') %>',
+              starHalf: '<%= asset_path('star-half.png') %>',
+              half: true,
+              readOnly: true,
+              score: <%= comment.evaluation %>,
+            });
+            </script>
+      <% end %>
+    </div>
+  </div>
+</div>
