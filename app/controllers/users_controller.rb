@@ -7,7 +7,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @comments = @user.comments.includes(:store).order('created_at')
+  end
+
+  def list
+    @user = User.find(params[:id])
+    @comments = @user.comments.includes(:store).order('created_at DESC')
   end
 
   def unsubscribe
