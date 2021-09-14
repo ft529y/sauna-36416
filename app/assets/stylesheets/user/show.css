@@ -30,56 +30,25 @@
   padding: 16px;
 }
 
-.withdrawal {
-  margin-top: 60px;
-  width: 75%;
-  text-align: right;
-  margin-bottom: 100px;
-}
-
-.show-withdrawal-btn:hover {
-  color: red;
-}
-
-.show-withdrawal-btn {
-  font-size: 16px;
-  transition: 0.5s;
-  text-decoration: none;
-  color: black;
-}
-
-
-
-
-
-
-
 .user-show-top {
-  margin-bottom: 13em;
+  margin-bottom: 64px;
   position: relative;
-  width: 100%;
-  /* background-color: #444; */
 }
 
 .user-show-list {
-  padding-left: 48px;
+  padding-left: 72px;
 }
 
 .user-show-list > .show-list {
   display: inline-block;
-  /* padding: 15px 30px; */
-  /* display: block; */
-  font-size: 0.8em;
-  text-transform: uppercase;
-  letter-spacing: .2em;
+  font-size: 12px;
 }
 
 .list-detail > .list-single > a{
   padding: 15px 30px;
   display: block;
   font-size: 0.8em;
-  text-transform: uppercase;
-  letter-spacing: .2em;
+  letter-spacing: 4px;
 }
 
 .user-show-list > .show-list:hover {
@@ -94,6 +63,8 @@
 
 .list-single{
   display: block;
+  width: 160px;
+  border: 1px solid #5c5c5c;
 }
 
 .list-single a{
