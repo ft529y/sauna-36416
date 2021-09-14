@@ -6,9 +6,9 @@
     MENU
     <li class="show-list"><span><i class="fas fa-chevron-down"></i></span>
       <ul class="list-detail">
-        <li class="list-single"><a href="#">Sub-menu01</a></li>
-        <li class="list-single"><a href="#">Sub-menu02</a></li>
-        <li class="list-single"><%= link_to "退会", unsubscribe_path(current_user.id) %></li>
+        <li class="list-single"><%= link_to "マイページ編集", "#" %></li>
+        <li class="list-single"><%= link_to "コメント一覧", list_user_path(@user) %></li>
+        <li class="list-single"><%= link_to "会員退会", unsubscribe_user_path(current_user.id) %></li>
       </ul>
     </li>
   </ul>
@@ -18,14 +18,14 @@
 <div class="user-detail-wrapper">
   <div class="user-detail-head">
     <div class="user-head-text">
-      ユーザー詳細ページ
+      ユーザー紹介ページ
     </div>
 
     <table class="detail-table">
       <tbody>
         <tr>
           <th class="detail-list-user">お名前</th>
-          <td class="detail-name-user"><%= @user.last_name %><%= current_user.first_name %></td>
+          <td class="detail-name-user"><%= @user.last_name %>  <%= current_user.first_name %></td>
         </tr>
         <tr>
           <th class="detail-list-user">生年月日</th>
@@ -43,5 +43,3 @@
     </table>
   </div>
 </div>
-
-<div class="withdrawal"><%= link_to "退会ページはこちら", unsubscribe_path(current_user.id), class: "show-withdrawal-btn" %></div>
