@@ -3,25 +3,30 @@
 <div class="post-page-wrap">
   <div class="post-comment-head">
     <h1 class="post-comment-letter">コメント一覧ページ</h1>
+    <p>※各施設名クリックして頂くと詳細ページへ遷移します。</p>
   </div>
 
   <div class="post-wrap">
-    <div class="post-comment">
-      <% @comments.each do |comment| %>
+    <% @comments.each do |comment| %>
+      <div class="post-comment">
         <div>
-          投稿した施設名 : <%= comment.store.store_name %>
+          投稿した施設名 : 
+          <span class="post-store-name">
+            <%= link_to comment.store.store_name, store_path(comment.store.id) %>
+          </span>
+        </div>
+        
+
+        <div class="post-text">
+          <%= comment.text %>
         </div>
 
-          <div>
-            <%= comment.text %>
-          </div>
+        <div>
+          <%= comment.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
+        </div>
 
-          <div>
-            <%= comment.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
-          </div>
-
-          <div class="star-icon" id="star-rate-<%= comment.id %>">
-          </div>
+        <div class="star-icon" id="star-rate-<%= comment.id %>">
+        </div>
             <script>
             $('#star-rate-<%= comment.id %>').raty({
               size: 36,
@@ -33,7 +38,7 @@
               score: <%= comment.evaluation %>,
             });
             </script>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>
