@@ -1,11 +1,13 @@
 class User < ApplicationRecord
+  has_many :stores
+  has_many :comments
+
+  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :stores
-  has_many :comments
 
   with_options presence: true do
     validates :nickname
@@ -19,7 +21,7 @@ class User < ApplicationRecord
 
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)\w{6,12}\z/
   validates :password,
-            format: { with: VALID_PASSWORD_REGEX, message: 'は無効です 6~12字以内で半角の英大文字、英小文字、数字のみを含んでいる必要があります' }, allow_nil: true
+            format: { with: VALID_PASSWORD_REGEX, message: 'は無効です 6~12字以内で半角の英大文字、英小文字、数字のみを含んでいる必要があります' }, allow_nil: true, on: :create
 
   validates :is_deleted, inclusion: { in: [true, false] }
 
