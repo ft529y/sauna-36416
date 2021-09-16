@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:show, :list, :unsubscribe, :withdrawal]
   before_action :set_params, only: [:show, :list, :unsubscribe, :withdrawal]
-  before_action :check_user, only: [:list]
+  before_action :check_user, only: [:list, :unsubscribe, :withdrawal]
 
   require 'date'
 
