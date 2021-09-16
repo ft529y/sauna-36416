@@ -85,3 +85,17 @@
 .show-list:hover .list-detail{
   display: block;
 }
+
+.erase-wrap {
+ text-align: center;
+ height: 100vh;;
+}
+
+.erase-user {
+  font-size: 40px;
+  padding: 300px 0;
+}
+
+.erase-user-text {
+  font-size: 20px;
+}
