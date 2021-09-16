@@ -117,3 +117,10 @@
   cursor: pointer;
   font-size: 20px;
 }
+
+.edit-notice {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 16px 0;
+  color: red;
+}
