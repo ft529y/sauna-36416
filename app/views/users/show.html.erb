@@ -1,45 +1,58 @@
+
+<% if @user.is_deleted == false %>
 <%= render "shared/header_logo" %>
-
-
-<div class="user-show-top">
-  <ul class="user-show-list">
-    MENU
-    <li class="show-list"><span><i class="fas fa-chevron-down"></i></span>
-      <ul class="list-detail">
-        <li class="list-single"><%= link_to "マイページ編集", edit_user_registration_path %></li>
-        <li class="list-single"><%= link_to "コメント一覧", list_user_path(@user) %></li>
-        <li class="list-single"><%= link_to "会員退会", unsubscribe_user_path(current_user.id) %></li>
+  <div class="user-show-top">
+    <% if current_user.id == @user.id %>
+      <ul class="user-show-list">
+        MENU
+        <li class="show-list"><span><i class="fas fa-chevron-down"></i></span>
+          <ul class="list-detail">
+            <li class="list-single"><%= link_to "マイページ編集", edit_user_registration_path %></li>
+            <li class="list-single"><%= link_to "コメント一覧", list_user_path(@user) %></li>
+            <li class="list-single"><%= link_to "会員退会", unsubscribe_user_path(current_user.id) %></li>
+          </ul>
+        </li>
       </ul>
-    </li>
-  </ul>
-</div>
-
-
-<div class="user-detail-wrapper">
-  <div class="user-detail-head">
-    <div class="user-head-text">
-      ユーザー詳細ページ
-    </div>
-
-    <table class="detail-table">
-      <tbody>
-        <tr>
-          <th class="detail-list-user">お名前</th>
-          <td class="detail-name-user"><%= @user.last_name %>  <%= current_user.first_name %></td>
-        </tr>
-        <tr>
-          <th class="detail-list-user">生年月日</th>
-          <td class="detail-name-user"><%= @user.birthday %></td>
-        </tr>
-        <tr>
-          <th class="detail-list-user">ニックネーム</th>
-          <td class="detail-name-user"><%= @user.nickname %></td>
-        </tr>
-        <tr>
-          <th class="detail-list-user">メールアドレス</th>
-          <td class="detail-name-user"><%= @user.email %></td>
-        </tr>
-      </tbody>
-    </table>
+    <% end %>
   </div>
-</div>
+
+
+  <div class="user-detail-wrapper">
+    <div class="user-detail-head">
+      <div class="user-head-text">
+        ユーザー詳細ページ
+      </div>
+
+      <table class="detail-table">
+        <tbody>
+          <tr>
+            <th class="detail-list-user">お名前</th>
+            <td class="detail-name-user"><%= @user.last_name %>  <%= current_user.first_name %></td>
+          </tr>
+          <tr>
+            <th class="detail-list-user">生年月日</th>
+            <td class="detail-name-user"><%= @user.birthday %></td>
+          </tr>
+          <tr>
+            <th class="detail-list-user">ニックネーム</th>
+            <td class="detail-name-user"><%= @user.nickname %></td>
+          </tr>
+          <tr>
+            <th class="detail-list-user">メールアドレス</th>
+            <td class="detail-name-user"><%= @user.email %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<% else %>
+  <div class="erase-wrap">
+  <%= render "shared/header_logo" %>
+    <div class="erase-user">
+      該当するページは存在しません。
+      <p class="erase-user-text">
+        ※既にユーザーが退会している可能性があります。
+      </p>
+    </div>
+  </div>
+<% end %>
