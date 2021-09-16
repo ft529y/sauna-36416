@@ -1,0 +1,24 @@
+.post-comment-head {
+  text-align: center;
+}
+
+.post-comment-letter {
+  color: #5c5c5c;
+  font-size: 32px;
+  padding: 16px 0;
+}
+
+.post-wrap {
+  text-align: center;
+}
+
+.post-store-name > a {
+  text-decoration: none;
+  color: skyblue;
+  font-weight: bold;
+}
+
+.post-comment {
+  border: 1px solid white;
+  padding: 16px 0;
+}

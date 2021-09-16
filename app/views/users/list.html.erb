@@ -1,0 +1,44 @@
+<%= render "shared/header_logo" %>
+
+<div class="post-page-wrap">
+  <div class="post-comment-head">
+    <h1 class="post-comment-letter">コメント一覧ページ</h1>
+    <p>※各施設名クリックして頂くと詳細ページへ遷移します。</p>
+  </div>
+
+  <div class="post-wrap">
+    <% @comments.each do |comment| %>
+      <div class="post-comment">
+        <div>
+          投稿した施設名 : 
+          <span class="post-store-name">
+            <%= link_to comment.store.store_name, store_path(comment.store.id) %>
+          </span>
+        </div>
+        
+
+        <div class="post-text">
+          <%= comment.text %>
+        </div>
+
+        <div>
+          <%= comment.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
+        </div>
+
+        <div class="star-icon" id="star-rate-<%= comment.id %>">
+        </div>
+            <script>
+            $('#star-rate-<%= comment.id %>').raty({
+              size: 36,
+              starOff:  '<%= asset_path('star-off.png') %>',
+              starOn : '<%= asset_path('star-on.png') %>',
+              starHalf: '<%= asset_path('star-half.png') %>',
+              half: true,
+              readOnly: true,
+              score: <%= comment.evaluation %>,
+            });
+            </script>
+      </div>
+    <% end %>
+  </div>
+</div>

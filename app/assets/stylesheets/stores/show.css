@@ -144,6 +144,17 @@
   margin: 24px 0;
 }
 
+.nickname-user > a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.nickname-user > a:hover {
+  color: #55b1df;
+}
+
 .date-time {
   color: black;
 }

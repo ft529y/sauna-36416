@@ -9,62 +9,93 @@
   margin-top: 24px;
 }
 
-.user-detail-name {
-  display: flex;
-  justify-content: center;
-  font-size: 32px;
-  margin-bottom: 32px;
+.detail-table {
+  margin: 0 auto;
 }
 
-.user-name {
-  margin-right: 24px;
+.detail-list-user {
+  width: 20%;
+  text-align: center;
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 16px;
 }
 
-.user-detail-birth {
-  line-height: 16px;
-  display: flex;
-  justify-content: center;
-  font-size: 32px;
-  margin-bottom: 32px;
+.detail-name-user {
+  width: 80%;
+  text-align: center;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid black;
+  padding: 16px;
 }
 
-.user-birth {
-  margin-right: 24px;
+.user-show-top {
+  margin-bottom: 64px;
+  position: relative;
 }
 
-.user-detail-nickname {
-  display: flex;
-  justify-content: center;
-  font-size: 32px;
-  margin-bottom: 32px;
+.user-show-list {
+  font-size: 20px;
+  padding-left: 72px;
 }
 
-.user-nickname {
-  margin-right: 24px;
+.user-show-list > .show-list {
+  display: inline-block;
+  font-size: 12px;
 }
 
-.user-detail-email {
-  display: flex;
-  justify-content: center;
-  font-size: 32px;
+.list-detail > .list-single > a{
+  padding: 15px 30px;
+  display: block;
+  font-size: 0.8em;
+  letter-spacing: 4px;
 }
 
-.user-email {
-  margin-right: 24px;
+.user-show-list > .show-list:hover {
+  color: blue;
 }
 
-.withdrawal {
-  margin-top: 60px;
-  width: 75%;
-  text-align: right;
+.list-detail{
+  position: absolute;
+  top: 18px;
+  left: 18px;
 }
 
-.show-withdrawal-btn:hover {
-  color: red;
+.list-single{
+  display: block;
+  width: 160px;
+  border: 1px solid #5c5c5c;
 }
 
-.show-withdrawal-btn {
-  transition: 0.5s;
+.list-single a{
+  background-color: #efefef;
+  color: #444;
   text-decoration: none;
-  color: black;
+}
+
+.list-single a:hover{
+  background-color: #ddd;
+}
+
+.list-detail{
+  display: none;
+}
+
+.show-list:hover .list-detail{
+  display: block;
+}
+
+.erase-wrap {
+ text-align: center;
+ height: 100vh;;
+}
+
+.erase-user {
+  font-size: 40px;
+  padding: 300px 0;
+}
+
+.erase-user-text {
+  font-size: 20px;
 }

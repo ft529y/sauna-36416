@@ -1,43 +1,86 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<%= render "shared/header_logo" %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+<div class="form-wrap">
+  <div class="new-form-header">
+    <h1 class="form-header-text">
+      会員情報編集
+    </h1>
+    <p class="edit-notice">
+      ※このページはユーザー情報編集ページです。
+    </p>
   </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+  <%= render 'shared/error_messages', model: f.object %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+<div class="notes"><i class="fas fa-hot-tub"></i><span class="notes-text">マークの箇所は入力必須となります。</span></div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
+<div class="form-item">
+  <div class="form-text-wrap">
+    <label class="form-text">ニックネーム</label>
+    <span><i class="fas fa-hot-tub"></i></span>
   </div>
+  <%= f.text_area :nickname, class:"default-info", 
+  id:"nickname", placeholder:"例:  タロー", maxlength:"30", autofocus: true %>
+</div>
 
-  <div class="actions">
-    <%= f.submit "Update" %>
+<div class="form-item">
+  <div class="form-text-wrap">
+    <label class="form-text">メールアドレス</label>
+    <span><i class="fas fa-hot-tub"></i></span>
   </div>
+  <%= f.email_field :email, class:"default-info", 
+  id:"email", placeholder:"例:  sample@co.jp" %>
+</div>
+
+<div class="form-item">
+  <p class="personal-info">
+    本人情報入力
+  </p>
+  <p class="personal-info-text">
+    ここより下は本人情報の登録にご協力下さい。<br>尚、こちらで記入頂いた個人情報は他のお客様に公開されることはありません。
+  </p>
+</div>
+
+<div class="form-item">
+  <div class="form-text-wrap">
+    <label class="form-text">お名前(全角)</label>
+    <span><i class="fas fa-hot-tub"></i></span>
+  </div>
+  <div class="input-name-wrap">
+    <%= f.text_area :last_name, class:"input-name", 
+    id:"last-name", placeholder:"例:  山田" %>
+    <%= f.text_area :first_name, class:"input-name", 
+    id:"first-name", placeholder:"例:  太郎" %>
+  </div>
+</div>
+
+<div class="form-item">
+  <div class="form-text-wrap">
+    <label class="form-text">生年月日</label>
+    <span><i class="fas fa-hot-tub"></i></span>
+  </div>
+  <div class="input-birth-wrap">
+    <%= raw sprintf(
+                f.date_select(
+                  :birthday,
+                  class:'select-birth',
+                  id:"birth-date",
+                  use_month_numbers: true,
+                  prompt:'--',
+                  start_year: 1930,
+                  end_year: (Time.now.year - 10),
+                  date_separator: '%s'),
+                "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+  </div>
+  <p class="notes-info">※本人情報入力欄は正しい情報の入力をお願いします。</p>
+</div>
+
+<div class="register-btn">
+  <%= f.submit "会員登録", class:"register-color" %>
+</div>
+
+</div>
 <% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
