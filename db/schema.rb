@@ -54,11 +54,11 @@ ActiveRecord::Schema.define(version: 2021_09_17_100142) do
     t.string "building_name"
     t.string "phone_number", null: false
     t.integer "bathing_fee", null: false
+    t.integer "sauna_temp", null: false
+    t.integer "water_temp", null: false
     t.integer "prefecture_id", null: false
     t.integer "rouryu_id", null: false
     t.integer "outside_bath_id", null: false
-    t.integer "sauna_temp_id", null: false
-    t.integer "water_temp_id", null: false
     t.index ["user_id"], name: "index_stores_on_user_id"
   end
 
