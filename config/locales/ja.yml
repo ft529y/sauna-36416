@@ -12,6 +12,15 @@ ja:
         store_name: 施設名
         description: 紹介文
         image: 画像
+        address: 住所
+        building_name: 番地
+        phone_number: 電話番号
+        bathing_fee: 入浴料
+        prefecture_id: 都道府県
+        rouryu_id: ロウリュ有無
+        outside_bath_id: 外気浴有無
+        sauna_temp_id: サウナ室温度
+        water_temp_id: 水風呂温度
       
       comment:
         text: 文章
