@@ -101,11 +101,11 @@ has_many :stores
 | building_name   | string     |                                |
 | phone_number    | string     | null: false                    |
 | bathing_fee     | integer    | null: false                    |
+| sauna_temp      | integer    | null: false                    |
+| water_temp      | integer    | null: false                    |
 | prefecture_id   | integer    | null: false                    |
 | rouryu_id       | integer    | null: false                    |
 | outside_bath_id | integer    | null: false                    |
-| sauna_temp_id   | integer    | null: false                    |
-| water_temp_id   | integer    | null: false                    |
 
 
 ### Association
