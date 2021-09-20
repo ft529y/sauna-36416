@@ -7,6 +7,7 @@ class Store < ApplicationRecord
   belongs_to :prefecture
   belongs_to :rouryu
   belongs_to :outside_bath
+  belongs_to :break_space
 
   with_options presence: true do
     validates :store_name, length: { maximum: 30 }
@@ -24,5 +25,6 @@ class Store < ApplicationRecord
     validates :prefecture_id
     validates :rouryu_id
     validates :outside_bath_id
+    validates :break_space_id
   end
 end
