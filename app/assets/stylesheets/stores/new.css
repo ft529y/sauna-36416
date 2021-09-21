@@ -38,14 +38,53 @@
   margin-bottom: 16px;
 }
 
+.new-select {
+  width: 50%;
+  padding: 16px;
+  font-size: 18px;
+  border: 1px solid #d3d3d3;
+  resize: none;
+  margin: 0 -16px;
+}
+
 .new-stores {
   width: 60%;
   margin: 0 auto;
 }
 
-.new-texts {
+.new-area {
   width: 100%;
   padding: 16px 8px 0 16px;
+  font-size: 18px;
+  border: 1px solid #d3d3d3;
+  resize: none;
+  margin: 0 -16px;
+}
+
+.new-field {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  border: 1px solid #d3d3d3;
+  resize: none;
+  margin: 0 -16px;
+}
+
+.new-stores-inside {
+ display: flex;
+}
+
+.new-stores-inside > p {
+  line-height: 55px;
+}
+
+.new-stores-left {
+  width: 25%;
+}
+
+.new-field-small {
+  width: 75%;
+  padding: 16px;
   font-size: 18px;
   border: 1px solid #d3d3d3;
   resize: none;
