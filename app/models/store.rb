@@ -10,13 +10,14 @@ class Store < ApplicationRecord
   belongs_to :break_space
 
   with_options presence: true do
+    VALID_PHONE_CODE_REGIX = /\A[0-9-]+\z/
+    
     validates :store_name, length: { maximum: 30 }
     validates :description, length: { maximum: 130 }
     validates :address
-    validates :sauna_temp, length: { maximum: 3 }
-    validates :water_temp, length: { maximum: 3 }
-    VALID_PHONE_CODE_REGIX = /\A[0-9-]+\z/
     validates :phone_number, length: { maximum: 15 }, format: { with: VALID_PHONE_CODE_REGIX }
+    validates :sauna_temp, length: { maximum: 3 }, numericality: { only_integer: true }
+    validates :water_temp, length: { maximum: 3 }, numericality: { only_integer: true }
     validates :bathing_fee, numericality: { only_integer: true }
     validates :image
   end
