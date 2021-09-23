@@ -8,6 +8,9 @@ Rails.application.routes.draw do
     resources :comments, only: [:new, :create]
   end
   resources :users, only: [:index, :show] do
+    collection do
+      get 'check', 'check/edit'
+    end
     member do
       get 'unsubscribe', 'list'
     end
