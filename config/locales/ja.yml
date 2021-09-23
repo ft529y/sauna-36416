@@ -7,6 +7,9 @@ ja:
         first_name: 名前
         birthday: 誕生日
         is_deleted: 退会判別コード
+        my_area: サ活エリア
+        period_id: サ活歴
+        introduce: 自己紹介文
 
       store:
         store_name: 施設名
