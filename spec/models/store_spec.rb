@@ -91,7 +91,7 @@ RSpec.describe Store, type: :model do
         @store.valid?
         expect(@store.errors.full_messages).to include 'サウナ室温度は3文字以内で入力してください'
       end
-      it 'sauna_tempが半角' do
+      it 'sauna_tempが半角数字では投稿できないこと' do
         @store.sauna_temp = '１００'
         @store.valid?
         expect(@store.errors.full_messages).to include 'サウナ室温度は数値で入力してください'
