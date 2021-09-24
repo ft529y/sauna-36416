@@ -13,6 +13,7 @@
 
 .detail-table-store {
   margin: 0 auto;
+  width: 50%;
 }
 
 .detail-list-store {
@@ -33,7 +34,7 @@
 }
 
 .detail-desc {
-  width: 60vw;
+  width: 64%;
   position: relative;
   margin: 40px auto;
   padding: 16px 16px;
