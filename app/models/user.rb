@@ -8,15 +8,22 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :period
 
   with_options presence: true do
     validates :nickname
     validates :birthday
+    validates :introduce, length: { maximum: 200 }
     VALID_NAME_REGIX = /\A[ぁ-んァ-ヶ一-龥々ー]+\z/
     with_options format: { with: VALID_NAME_REGIX, message: 'は全角文字を入力して下さい' } do
       validates :last_name
       validates :first_name
     end
+  end
+
+  with_options numericality: { other_than: 1, message: "の項目は---以外を入力して下さい" } do
+    validates :period_id
   end
 
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)\w{6,12}\z/

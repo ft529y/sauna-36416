@@ -4,20 +4,37 @@
 
 .detail-img {
   text-align: center;
+  margin-bottom: 24px;
 }
 
 .img-detail {
   width: 50vw;
 }
 
-.detail-name {
+.detail-table-store {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.detail-list-store {
+  width: 15vw;
   text-align: center;
-  font-size: 24px;
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 16px;
+}
+
+.detail-name-store {
+  width: 40vw;
+  text-align: center;
   font-weight: bold;
+  background-color: white;
+  border: 1px solid black;
+  padding: 16px;
 }
 
 .detail-desc {
-  width: 50vw;
+  width: 64%;
   position: relative;
   margin: 40px auto;
   padding: 16px 16px;

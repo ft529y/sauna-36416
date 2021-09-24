@@ -23,26 +23,68 @@
         ユーザー詳細ページ
       </div>
 
-      <table class="detail-table">
-        <tbody>
-          <tr>
-            <th class="detail-list-user">お名前</th>
-            <td class="detail-name-user"><%= @user.last_name %>  <%= current_user.first_name %></td>
-          </tr>
-          <tr>
-            <th class="detail-list-user">生年月日</th>
-            <td class="detail-name-user"><%= @user.birthday %></td>
-          </tr>
-          <tr>
-            <th class="detail-list-user">ニックネーム</th>
-            <td class="detail-name-user"><%= @user.nickname %></td>
-          </tr>
-          <tr>
-            <th class="detail-list-user">メールアドレス</th>
-            <td class="detail-name-user"><%= @user.email %></td>
-          </tr>
-        </tbody>
-      </table>
+      <% if current_user.id == @user.id %>
+        <table class="detail-table-user">
+          <tbody>
+
+            <tr>
+              <th class="detail-list-user">お名前</th>
+              <td class="detail-name-user"><%= @user.last_name %>  <%= current_user.first_name %></td>
+            </tr>
+
+            <tr>
+              <th class="detail-list-user">生年月日</th>
+              <td class="detail-name-user"><%= @user.birthday %></td>
+            </tr>
+
+            <tr>
+              <th class="detail-list-user">メールアドレス</th>
+              <td class="detail-name-user"><%= @user.email %></td>
+            </tr>
+
+            <tr>
+              <th class="detail-list-user">ニックネーム</th>
+              <td class="detail-name-user"><%= @user.nickname %></td>
+            </tr>
+
+            <tr>
+              <th class="detail-list-user">サ活エリア</th>
+              <td class="detail-name-user"><%= @user.my_area %></td>
+            </tr>
+
+            <tr>
+              <th class="detail-list-user">サ活歴</th>
+              <td class="detail-name-user"><%= @user.period.name %></td>
+            </tr>
+
+            <tr>
+              <th class="detail-list-user">自己紹介文</th>
+              <td class="detail-name-user"><%= @user.introduce %></td>
+            </tr>
+
+          </tbody>
+        </table>
+      <% else %>
+        <table class="detail-table-user">
+          <tbody>
+            <tr>
+                <th class="detail-list-user">ニックネーム</th>
+                <td class="detail-name-user"><%= @user.nickname %></td>
+              </tr>
+              <tr>
+                <th class="detail-list-user">サ活エリア</th>
+                <td class="detail-name-user"><%= @user.my_area %></td>
+              </tr>
+              <tr>
+                <th class="detail-list-user">サ活歴</th>
+                <td class="detail-name-user"><%= @user.period.name %></td>
+              </tr>
+              <tr>
+                <th class="detail-list-user">自己紹介文</th>
+                <td class="detail-name-user"><%= @user.introduce %></td>
+              </tr>
+          </tbody>
+      <% end %>
     </div>
   </div>
 <% else %>

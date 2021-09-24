@@ -6,9 +6,60 @@
       <%= image_tag @store.image, class: "img-detail" %>
     </div>
 
-    <div class="detail-name">
-      <%= @store.store_name %>
-    </div>
+    <table class="detail-table-store">
+      <tbody>
+        <tr>
+          <th class="detail-list-store">施設名</th>
+          <td class="detail-name-store"><%= @store.store_name %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-list-store">入浴料</th>
+          <td class="detail-name-store"><%= @store.bathing_fee %>円</td>
+        </tr>
+
+        <tr>
+          <th class="detail-list-store">サウナ室温度</th>
+          <td class="detail-name-store"><%= @store.sauna_temp %>℃</td>
+        </tr>
+
+        <tr>
+          <th class="detail-list-store">水風呂温度</th>
+          <td class="detail-name-store"><%= @store.water_temp %>℃</td>
+        </tr>
+
+        <tr>
+          <th class="detail-list-store">オートロウリュ</th>
+          <td class="detail-name-store"><%= @store.rouryu.name %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-list-store">外気浴スペース</th>
+          <td class="detail-name-store"><%= @store.outside_bath.name %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-list-store">休憩スペース</th>
+          <td class="detail-name-store"><%= @store.break_space.name %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-list-store">都道府県</th>
+          <td class="detail-name-store"><%= @store.prefecture.name %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-list-store">住所</th>
+          <td class="detail-name-store"><%= @store.address %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-list-store">電話番号</th>
+          <td class="detail-name-store"><%= @store.phone_number %></td>
+        </tr>
+
+      </tbody>
+    </table>
 
     <div class="detail-desc">
       <span class="box-title">おすすめポイント!</span>

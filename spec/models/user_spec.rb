@@ -7,7 +7,11 @@ RSpec.describe User, type: :model do
 
   describe 'ユーザー新規登録' do
     context 'ユーザーが新規登録できる時' do
-      it 'nickname,email,password,password_confirmation,last_name,first_name,birthday,is_deletedが存在すれば登録できること' do
+      it 'nickname,email,password,password_confirmation,last_name,first_name,birthday,is_deleted,period_id,introduceが存在すれば登録できること' do
+        expect(@user).to be_valid
+      end
+      it 'my_areaが空でも登録できること' do
+        @user.my_area = ''
         expect(@user).to be_valid
       end
       it 'passwordとpassword_confirmationが6文字以上12文字以内なら登録できること' do
@@ -18,6 +22,10 @@ RSpec.describe User, type: :model do
       it 'passwordとpassword_confirmationは半角英大文字、半角英小文字、半角数字混合なら登録できること' do
         @user.password = 'A1a1a1'
         @user.password_confirmation = @user.password
+        expect(@user).to be_valid
+      end
+      it 'introduceが200文字以内なら登録できること' do
+        @user.introduce = 'あ' * 200
         expect(@user).to be_valid
       end
     end
@@ -121,6 +129,16 @@ RSpec.describe User, type: :model do
         @user.is_deleted = nil
         @user.valid?
         expect(@user.errors.full_messages).to include '退会判別コードは一覧にありません'
+      end
+      it 'period_idが1だと登録できないこと' do
+        @user.period_id = 1
+        @user.valid?
+        expect(@user.errors.full_messages).to include 'サ活歴の項目は---以外を入力して下さい'
+      end
+      it 'introduceが201文字以上だと登録できないこと' do
+        @user.introduce = 'あ' * 201
+        @user.valid?
+        expect(@user.errors.full_messages).to include '自己紹介文は200文字以内で入力してください'
       end
     end
   end

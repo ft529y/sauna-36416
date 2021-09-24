@@ -59,12 +59,49 @@
   resize: none;
 }
 
+.introduce-info {
+  width: 100%;
+  margin-top: 5px;
+  height: 200px;
+  padding: 12px 16px 8px;
+  font-size: 16px;
+  margin: 0 -16px;
+  resize: none;
+}
+
+.my-area-info {
+  width: 100%;
+  margin-top: 5px;
+  height: 64px;
+  padding: 12px 16px 8px;
+  font-size: 16px;
+  margin: 0 -16px;
+  resize: none;
+}
+
+.new-user {
+  width: 260px;
+  margin: 0 auto;
+}
+
+.new-font-letter {
+  font-weight: bold;
+  margin: 16px 0;
+}
+
+.user-select {
+  width: 114%;
+  padding: 16px;
+  margin: 0 -16px;
+}
+
 .info-text {
   margin-top: 8px;
 }
 
 .personal-info {
   font-weight: bold;
+  color: red;
 }
 
 .input-name-wrap {

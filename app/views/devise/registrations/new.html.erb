@@ -16,20 +16,11 @@
 
 <div class="form-item">
   <div class="form-text-wrap">
-    <label class="form-text">ニックネーム</label>
-    <span><i class="fas fa-hot-tub"></i></span>
-  </div>
-  <%= f.text_area :nickname, class:"default-info", 
-  id:"nickname", placeholder:"例:  タロー", maxlength:"30", autofocus: true %>
-</div>
-
-<div class="form-item">
-  <div class="form-text-wrap">
     <label class="form-text">メールアドレス</label>
     <span><i class="fas fa-hot-tub"></i></span>
   </div>
   <%= f.email_field :email, class:"default-info", 
-  id:"email", placeholder:"例:  sample@co.jp" %>
+  id:"email", placeholder:"例:  sample@co.jp", autofocus: true  %>
 </div>
 
 <div class="form-item">
@@ -52,7 +43,50 @@
 
 <div class="form-item">
   <p class="personal-info">
-    本人情報入力
+    ↓プロフィール入力↓
+  </p>
+  <p class="personal-info-text">
+    ここより下はプロフィール情報の登録をお願いします。<br>
+    ※尚、プロフィール情報は他のユーザーも閲覧することができますので、個人情報等の入力をしないようご注意下さい。
+  </p>
+</div>
+
+<div class="form-item">
+  <div class="form-text-wrap">
+    <label class="form-text">ニックネーム</label>
+    <span><i class="fas fa-hot-tub"></i></span>
+  </div>
+  <%= f.text_area :nickname, class:"default-info", 
+  id:"nickname", placeholder:"例:  タロー", maxlength:"30" %>
+</div>
+
+<div class="form-item">
+  <div class="form-text-wrap">
+    <label class="form-text">自己紹介文</label>
+    <span><i class="fas fa-hot-tub"></i></span>
+  </div>
+  <%= f.text_area :introduce, class:"introduce-info", 
+  id:"introduce", placeholder:"例:  サウナが趣味な男性です。是非このアプリを通じて色々な情報交換をしましょう！！" %>
+</div>
+
+<div class="form-item">
+  <div class="form-text-wrap">
+    <label class="form-text">サ活エリア</label>
+  </div>
+  <%= f.text_area :my_area, class:"my-area-info", 
+  id:"my-area", placeholder:"例:  東京都港区が多めです。" %>
+</div>
+
+<div class="form-item">
+  <div class="form-text-wrap">
+    <label class="form-text">サ活歴</label>
+  </div>
+<%= f.collection_select(:period_id, Period.all, :id, :name, {}, class:"user-select") %>
+</div>
+
+<div class="form-item">
+  <p class="personal-info">
+    ↓本人情報入力↓
   </p>
   <p class="personal-info-text">
     ここより下は本人情報の登録にご協力下さい。<br>尚、こちらで記入頂いた個人情報は他のお客様に公開されることはありません。
@@ -90,6 +124,7 @@
                   date_separator: '%s'),
                 "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
   </div>
+
   <p class="notes-info">※本人情報入力欄は正しい情報の入力をお願いします。</p>
 </div>
 

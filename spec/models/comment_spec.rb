@@ -24,6 +24,16 @@ RSpec.describe Comment, type: :model do
         @comment.valid?
         expect(@comment.errors.full_messages).to include '評価を入力して下さい。'
       end
+      it 'user_idが空では投稿できないこと' do
+        @comment.user_id = nil
+        @comment.valid?
+        expect(@comment.errors.full_messages).to include 'Userを入力してください'
+      end
+      it 'store_idが空では投稿できないこと' do
+        @comment.store_id = nil
+        @comment.valid?
+        expect(@comment.errors.full_messages).to include 'Storeを入力してください'
+      end
     end
   end
 end
