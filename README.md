@@ -57,8 +57,11 @@ password : B2b2b2
 [![Image from Gyazo](https://i.gyazo.com/5f8f0e4c143706ccb9126d12eaca573d.gif)](https://gyazo.com/5f8f0e4c143706ccb9126d12eaca573d)
 
 # 工夫したポイント
-- コメント機能だけでなく、星形の段階評価を実装することでより、評価をわかりやすくした。
-- 3択クイズ機能は終了時にJavaScriptで動きを加えて表示させた。
+- コメント機能だけでなく、星形の段階評価を実装することでより、評価をわかりやす
+くした。
+- サウナ施設の情報登録の際に詳細な部分のカラムを追加し、よりユーザーに情報を提供することを目指した。
+- 3択クイズ機能はJavaScriptにて動きを加えて表示させた。
+
 
 # 実装予定の機能
 - サウナ施設の住所情報等を加えることでより、実用性のあるアプリにする。
@@ -67,7 +70,8 @@ password : B2b2b2
 
 # データベース設計
 ### ER図
-![sauna-er](https://user-images.githubusercontent.com/87511321/132481489-aa53fb8f-d4e0-49c3-bbec-2d40b21bee88.png)
+![saunau](https://user-images.githubusercontent.com/87511321/134636803-cfce73d7-b044-430f-a12f-10694a9ab6a9.png)
+
 
 
 
@@ -84,6 +88,9 @@ password : B2b2b2
 | first_name         | string  | null: false                 |
 | birthday           | date    | null: false                 |
 | is_deleted         | boolean | null: false, default: false |
+| my_area            | string  |                             |
+| period_id          | integer | null: false, default: false |
+| introduce          | text    | null: false, default: false |
 
 ### Association
 
