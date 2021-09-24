@@ -14,7 +14,7 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :nickname
     validates :birthday
-    validates :introduce
+    validates :introduce, length: { maximum: 200 }
     VALID_NAME_REGIX = /\A[ぁ-んァ-ヶ一-龥々ー]+\z/
     with_options format: { with: VALID_NAME_REGIX, message: 'は全角文字を入力して下さい' } do
       validates :last_name
