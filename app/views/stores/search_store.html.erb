@@ -22,6 +22,21 @@
     <% end %>
   </ul>
   <% else %>
-  <p class="empty-result">該当施設はありません。</p>
+
+  <span class="search-box"><h3>施設検索</h3></span>
+  <%= search_form_for @p, url: search_store_stores_path do |f| %>
+    <%= f.label :prefecture_id_eq, '都道府県検索', class: "prefecture-name" %>
+    <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name, {include_blank: '指定なし'},{class:"select-box", id:"prefecture-categorty"} %>
+
+    <%= f.submit '検索', class:"search-btn" %>
+  <% end %>
+
+  <div class="check-wrap">
+    <p class="empty-result">該当する施設はありませんでした。</p>
+
+    <div class="back-top-page">
+      <%= link_to "TOPページへ戻る", root_path, class: "back-text" %>
+    </div>
+  </div>
   <% end %>
 </div>
