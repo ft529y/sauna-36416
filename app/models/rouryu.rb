@@ -6,7 +6,7 @@ class Rouryu < ActiveHash::Base
     { id: 4, name: '有 (90分に1回)' },
     { id: 5, name: '有 (120分に1回)' },
     { id: 6, name: '有 (不定期実施)' },
-    { id: 7, name: '無' },
+    { id: 7, name: '無' }
   ]
 
   include ActiveHash::Associations

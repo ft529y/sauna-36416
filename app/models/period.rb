@@ -5,7 +5,7 @@ class Period < ActiveHash::Base
     { id: 4, name: '半年' },
     { id: 5, name: '1年' },
     { id: 6, name: '3年以上' },
-    { id: 7, name: '5年以上' },
+    { id: 7, name: '5年以上' }
   ]
 
   include ActiveHash::Associations
