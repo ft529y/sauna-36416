@@ -29,6 +29,12 @@ class UsersController < ApplicationController
   end
 end
 
+def check
+end
+
+def check_edit
+end
+
 private
 
 def set_params
