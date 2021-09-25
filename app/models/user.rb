@@ -2,7 +2,6 @@ class User < ApplicationRecord
   has_many :stores
   has_many :comments
 
-  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -22,7 +21,7 @@ class User < ApplicationRecord
     end
   end
 
-  with_options numericality: { other_than: 1, message: "の項目は---以外を入力して下さい" } do
+  with_options numericality: { other_than: 1, message: 'の項目は---以外を入力して下さい' } do
     validates :period_id
   end
 

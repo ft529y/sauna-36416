@@ -11,7 +11,7 @@ class Store < ApplicationRecord
 
   with_options presence: true do
     VALID_PHONE_CODE_REGIX = /\A[0-9-]+\z/
-    
+
     validates :store_name, length: { maximum: 30 }
     validates :description, length: { maximum: 130 }
     validates :address
@@ -22,7 +22,7 @@ class Store < ApplicationRecord
     validates :image
   end
 
-  with_options numericality: { other_than: 1, message: "の項目は---以外を入力して下さい" } do
+  with_options numericality: { other_than: 1, message: 'の項目は---以外を入力して下さい' } do
     validates :prefecture_id
     validates :rouryu_id
     validates :outside_bath_id
