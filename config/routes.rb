@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:index, :show] do
     collection do
-      get 'check', 'check/edit'
+      get 'check', 'check_edit'
     end
     member do
       get 'unsubscribe', 'list'
