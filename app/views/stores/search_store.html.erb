@@ -1,0 +1,27 @@
+<%= render "shared/header_logo" %>
+
+<div class="list-wrapper">
+  <div class="header-list-content">
+    <h2 class="header-list-text">
+      施設一覧画面
+      <p class="list-text-head">※各施設名または写真をクリックすると詳細ページへアクセスできます！</p>
+    </h2>
+  </div>
+  <ul class="list-page-wrap">
+  <% if @results.length != 0 %>
+    <% @results.each do |result| %>
+      <li class="list-list">
+        <div class="store-img-content">
+          <%= link_to image_tag(result.image, class: "store-img"), store_path(result) %>
+        </div>
+        <div class="store-name-content">
+          <div class="name-content"><%= link_to result.store_name, store_path(result) %></div>
+          <div class="desc-content"><%= result.description %></div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+  <% else %>
+  <p class="empty-result">該当施設はありません。</p>
+  <% end %>
+</div>
