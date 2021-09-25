@@ -33,5 +33,6 @@ end
 private
 
 def store_params
-  params.require(:store).permit(:store_name, :description, :image, :address, :phone_number, :bathing_fee, :sauna_temp, :water_temp, :prefecture_id, :rouryu_id, :outside_bath_id, :break_space_id).merge(user_id: current_user.id)
+  params.require(:store).permit(:store_name, :description, :image, :address, :phone_number, :bathing_fee, :sauna_temp,
+                                :water_temp, :prefecture_id, :rouryu_id, :outside_bath_id, :break_space_id).merge(user_id: current_user.id)
 end
