@@ -1,5 +1,17 @@
 <%= render "shared/header_logo" %>
 
+<div class="list-search-wrap">
+  <ul class="left-search-list">
+    <li>キーワードから探す</li>
+    <li>都道府県から探す</li>
+    <li>入浴料から探す</li>
+  </ul>
+
+  <ul class="right-content">
+    <li>施設を投稿する</li>
+  </ul>
+</div>
+
 <div class="search-box-wrap">
   <span class="search-box"><h3>施設検索</h3></span>
     <%= search_form_for @p, url: search_store_stores_path do |f| %>
