@@ -2,13 +2,13 @@
 
 <div class="list-search-wrap">
   <ul class="left-search-list">
-    <li>キーワードから探す</li>
-    <li>都道府県から探す</li>
-    <li>入浴料から探す</li>
+    <li><%= link_to 'キーワードから探す', '#'%></li>
+    <li><%= link_to '都道府県から探す', search_prefecture_stores_path %></li>
+    <li><%= link_to '入浴料から探す', '#' %></li>
   </ul>
 
   <ul class="right-content">
-    <li>施設を投稿する</li>
+    <li>施設情報を投稿する</li>
   </ul>
 </div>
 
@@ -25,7 +25,7 @@
 <div class="list-wrapper">
   <div class="header-list-content">
     <h2 class="header-list-text">
-      施設一覧画面
+      施設一覧画面（新着順）
       <p class="list-text-head">※各施設名または写真をクリックすると詳細ページへアクセスできます！</p>
     </h2>
   </div>
