@@ -1,3 +1,29 @@
+.list-search-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 50px;
+  width: 100%;
+  background-color: aquamarine;
+  align-items: center;
+}
+
+.left-search-list {
+  display: flex;
+}
+
+.left-search-list > li {
+  padding-left: 24px;
+}
+
+.right-content {
+  text-align: right;
+}
+
+.right-content > li {
+  padding-right: 24px;
+}
+
 .list-wrapper {
   background-color: #ffe4c4;
   padding-bottom: 80px;
