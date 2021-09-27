@@ -8,7 +8,7 @@ FactoryBot.define do
     outside_bath_id       { 2 }
     break_space_id        { 2 }
     bathing_fee           { '1000' }
-    prefecture_id         { 2 }
+    prefecture_id         { 1 }
     address               { '東京都港区青山1-1-1サンプルビル100' }
     phone_number          { '09012345678' }
     association :user
