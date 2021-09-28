@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers:{  registrations:'users/registrations'  }
   resources :stores, only: [:index, :new, :create, :show] do
     collection do
-      get 'list', 'check', 'search_store', 'search_prefecture'
+      get 'list', 'check', 'search_prefecture', 'searching_prefecture'
     end
     resources :comments, only: [:new, :create]
   end
