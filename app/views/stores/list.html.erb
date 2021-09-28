@@ -2,7 +2,7 @@
 
 <div class="list-search-wrap">
   <ul class="left-search-list">
-    <li><%= link_to 'キーワードから探す', '#'%></li>
+    <li><%= link_to 'キーワードから探す', search_keyword_stores_path%></li>
     <li><%= link_to '都道府県から探す', search_prefecture_stores_path %></li>
     <li><%= link_to '入浴料から探す', '#' %></li>
   </ul>
@@ -10,16 +10,6 @@
   <ul class="right-content">
     <li>施設情報を投稿する</li>
   </ul>
-</div>
-
-<div class="search-box-wrap">
-  <span class="search-box"><h3>施設検索</h3></span>
-    <%= search_form_for @p, url: searching_prefecture_stores_path do |f| %>
-      <%= f.label :prefecture_id_eq, '都道府県検索', class: "prefecture-name" %>
-      <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name, {include_blank: '指定なし'},{class:"select-box", id:"prefecture-categorty"} %>
-
-      <%= f.submit '検索', class:"search-btn" %>
-    <% end %>
 </div>
 
 <div class="list-wrapper">
