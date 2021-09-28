@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   height: 50px;
   width: 100%;
-  background-color: aquamarine;
+  background-color: lightblue;
   align-items: center;
 }
 
@@ -12,16 +12,20 @@
   display: flex;
 }
 
-.left-search-list > li {
-  padding-left: 24px;
+.left-search-list > li > a {
+  margin-left: 3vw;
+  text-decoration: none;
+  color: black;
 }
 
 .right-content {
   text-align: right;
 }
 
-.right-content > li {
-  padding-right: 24px;
+.right-content > li > a {
+  margin-right: 3vw;
+  text-decoration: none;
+  color: black;
 }
 
 .list-wrapper {
