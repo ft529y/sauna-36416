@@ -4,11 +4,11 @@
   <ul class="left-search-list">
     <li><%= link_to 'キーワードから探す', search_keyword_stores_path%></li>
     <li><%= link_to '都道府県から探す', search_prefecture_stores_path %></li>
-    <li><%= link_to '入浴料から探す', '#' %></li>
+    <li><%= link_to '入浴料から探す', search_bathing_fee_stores_path %></li>
   </ul>
 
   <ul class="right-content">
-    <li>施設情報を投稿する</li>
+    <%= link_to '施設情報を投稿する', new_store_path %>
   </ul>
 </div>
 
