@@ -1,10 +1,10 @@
 <%= render "shared/header_logo" %>
 
 <%= search_form_for @p, url: searching_keyword_stores_path do |f| %>
-  <div class="keyword-box-wrap">
+  <div class="search-box-wrap">
     <div class="keyword-box">
-      検索窓
-      <%= f.search_field :store_name_cont, placeholder: "〇〇を探す", class: "form-control" %>
+      <p>キーワード検索</p>
+      <%= f.search_field :store_name_or_description_cont, placeholder: "キーワードを入力して下さい", class: "form-control" %>
     </div>
 
     <%= f.submit '検索', class:"search-btn" %>
