@@ -1,6 +1,6 @@
 class StoresController < ApplicationController
   before_action :authenticate_user!, only: [:new]
-  before_action :create_searching_object, only: [:list, :search_store, :search_prefecture]
+  before_action :create_searching_object, only: [:list, :search_prefecture, :searching_prefecture]
 
   def index
   end
@@ -9,7 +9,7 @@ class StoresController < ApplicationController
     @stores = Store.order('created_at DESC')
   end
 
-  def search_store
+  def searching_prefecture
     @results = @p.result.order('created_at DESC')
   end
 
