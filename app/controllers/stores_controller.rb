@@ -2,6 +2,7 @@ class StoresController < ApplicationController
   before_action :authenticate_user!, only: [:new]
   before_action :create_searching_prefecture, only: [:list, :search_prefecture, :searching_prefecture]
   before_action :create_searching_keyword, only: [:list, :search_keyword, :searching_keyword]
+  before_action :create_searching_bathing_fee, only: [:list, :search_bathing_fee, :searching_bathing_fee]
 
   def index
   end
@@ -23,6 +24,14 @@ class StoresController < ApplicationController
   end
 
   def searching_prefecture
+    @results = @p.result.order('created_at DESC')
+  end
+
+  def search_bathing_fee
+    @results = @p.result.order('created_at DESC')
+  end
+
+  def searching_bathing_fee
     @results = @p.result.order('created_at DESC')
   end
 
@@ -55,10 +64,14 @@ def store_params
                                 :water_temp, :prefecture_id, :rouryu_id, :outside_bath_id, :break_space_id).merge(user_id: current_user.id)
 end
 
+def create_searching_keyword
+  @p = Store.ransack(params[:q])
+end
+
 def create_searching_prefecture
   @p = Store.ransack(params[:q])
 end
 
-def create_searching_keyword
+def create_searching_bathing_fee
   @p = Store.ransack(params[:q])
 end
