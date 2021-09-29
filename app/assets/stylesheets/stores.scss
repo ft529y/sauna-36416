@@ -217,34 +217,26 @@ h4 {
   text-align: center;
 }
 
-.keyword-box {
-  margin: 32px 0;
-  font-size: 20px;
-}
-
 .keyword-box > p {
   margin-bottom: 16px;
 }
 
 .form-control {
   padding: 12px;
-  width: 32%;
+  width: 80%;
 }
 
-.search-btn {
-  padding: 0 16px;
-}
-
-.bathing-fee-box {
+.search-box {
   margin:2em auto;
   position: relative;
   padding: 0.5em 1.5em;
   border-top: solid 2px black;
   border-bottom: solid 2px black;
-  width: 50%;
+  width: 40%;
+  height: 160px;
 }
 
-.bathing-fee-box::before, .bathing-fee-box::after {
+.search-box::before, .search-box::after {
   content: '';
     position: absolute;
     top: -10px;
@@ -254,10 +246,44 @@ h4 {
     background-color: black;
 }
 
-.bathing-fee-box::before {
+.search-box::before {
   left: 10px;
 }
 
-.bathing-fee-box::after {
+.search-box::after {
   right: 10px;
+}
+
+.search-box > p {
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+.prefecture-name {
+  padding-bottom: 24px;
+}
+
+.prefecture-text {
+  padding-bottom: 16px;
+}
+
+.select-box {
+  font-size: 20px;
+  padding: 4px;
+  width: 40%;
+}
+
+.keyword-search-btn {
+  padding: 0 16px;
+  margin-top: 16px;
+}
+
+.prefecture-search-btn {
+  padding: 0 16px;
+  margin-top: 20px;
+}
+
+.bathing-fee-search-btn {
+  padding: 0 16px;
+  margin-top: 16px;
 }
