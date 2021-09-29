@@ -234,3 +234,30 @@ h4 {
 .search-btn {
   padding: 0 16px;
 }
+
+.bathing-fee-box {
+  margin:2em auto;
+  position: relative;
+  padding: 0.5em 1.5em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  width: 50%;
+}
+
+.bathing-fee-box::before, .bathing-fee-box::after {
+  content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: black;
+}
+
+.bathing-fee-box::before {
+  left: 10px;
+}
+
+.bathing-fee-box::after {
+  right: 10px;
+}
