@@ -1,10 +1,9 @@
 <%= render "shared/header_logo" %>
 
-<div class="search-box-wrap">
-  <span class="search-box"><h3>施設検索</h3></span>
-    <%= search_form_for @p, url: searching_bathing_fee_stores_path do |f| %>
-      <%= f.label :bathing_fee, '入浴料', class: "bathing_fee_name" %>
-      <br>
+<%= search_form_for @p, url: searching_bathing_fee_stores_path do |f| %>
+  <div class="search-box-wrap">
+    <div class="bathing-fee-box">
+      <p>入浴料</p>
       <%= f.radio_button :bathing_fee_lteq, '' %>
       指定なし
       <%= f.radio_button :bathing_fee_lteq, '1000' %>
@@ -15,5 +14,6 @@
       3000円以下
       <br>
       <%= f.submit '検索', class:"search-btn" %>
-    <% end %>
-</div>
+    </div>
+  </div>
+<% end %>
