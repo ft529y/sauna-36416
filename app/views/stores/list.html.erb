@@ -1,9 +1,21 @@
 <%= render "shared/header_logo" %>
 
+<div class="list-search-wrap">
+  <ul class="left-search-list">
+    <li><%= link_to 'キーワードから探す', search_keyword_stores_path%></li>
+    <li><%= link_to '都道府県から探す', search_prefecture_stores_path %></li>
+    <li><%= link_to '入浴料から探す', search_bathing_fee_stores_path %></li>
+  </ul>
+
+  <ul class="right-content">
+    <li><%= link_to '施設情報を投稿する', new_store_path %></li>
+  </ul>
+</div>
+
 <div class="list-wrapper">
   <div class="header-list-content">
     <h2 class="header-list-text">
-      施設一覧画面
+      施設一覧画面（新着順）
       <p class="list-text-head">※各施設名または写真をクリックすると詳細ページへアクセスできます！</p>
     </h2>
   </div>

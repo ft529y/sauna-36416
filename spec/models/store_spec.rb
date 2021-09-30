@@ -126,8 +126,8 @@ RSpec.describe Store, type: :model do
         @store.valid?
         expect(@store.errors.full_messages).to include '入浴料は数値で入力してください'
       end
-      it 'prefecture_idが1だと投稿できないこと' do
-        @store.prefecture_id = 1
+      it 'prefecture_idが入力していないと投稿できないこと' do
+        @store.prefecture_id = nil
         @store.valid?
         expect(@store.errors.full_messages).to include '都道府県の項目は---以外を入力して下さい'
       end

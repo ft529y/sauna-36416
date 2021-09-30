@@ -14,13 +14,13 @@
           <ul class="header-lists-right">
             <% if user_signed_in? %>
             <li><%= link_to "サウナ施設一覧", list_stores_path, class: "stores-list-nav" %></li>
-            <li><%= link_to "サウナ情報投稿", new_store_path, class: "new-store-nav" %></li>
-            <li><%= link_to "マイページ", user_path(current_user.id), class: "user-name-nav" %></li>
-            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout-nav"  %></li>
+            <li><%= link_to "サウナ情報投稿", new_store_path, class: "stores-list-nav" %></li>
+            <li><%= link_to "マイページ", user_path(current_user.id), class: "stores-list-nav" %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "stores-list-nav"  %></li>
             <% else %>
             <li><%= link_to "サウナ施設一覧", list_stores_path, class: "stores-list-nav" %></li>
-            <li><%= link_to "ログイン", new_user_session_path,  class: "login-nav" %></li>
-            <li><%= link_to "新規登録", new_user_registration_path , class: "sign-up-nav" %></li>
+            <li><%= link_to "ログイン", new_user_session_path,  class: "stores-list-nav" %></li>
+            <li><%= link_to "新規登録", new_user_registration_path , class: "stores-list-nav" %></li>
             <% end %>
           </ul>
         </div>

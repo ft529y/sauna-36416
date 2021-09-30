@@ -47,36 +47,12 @@ span.header-content-color {
 }
 
 .stores-list-nav {
-  margin-right: 32px;
+  margin-right: 4vw;
   text-decoration: none;
   color: #5c5c5c;
 }
 
 .new-store-nav {
-  margin-right: 32px;
-  text-decoration: none;
-  color: #5c5c5c;
-}
-
-.user-name-nav {
-  margin-right: 32px;
-  text-decoration: none;
-  color: #5c5c5c;
-}
-
-.logout-nav {
-  margin-right: 32px;
-  text-decoration: none;
-  color: #5c5c5c;
-}
-
-.login-nav {
-  margin-right: 32px;
-  text-decoration: none;
-  color: #5c5c5c;
-}
-
-.sign-up-nav {
   margin-right: 32px;
   text-decoration: none;
   color: #5c5c5c;
@@ -224,4 +200,90 @@ footer  {
 h4 {
   text-align: center;
   color: #5c5c5c;
+}
+
+.empty-result {
+  font-size: 32px;
+  text-align: center;
+  padding: 240px 0;
+}
+
+.search-box-wrap {
+  text-align: center;
+  padding: 64px 0;
+}
+
+.keyword-box-wrap {
+  text-align: center;
+}
+
+.keyword-box > p {
+  margin-bottom: 16px;
+}
+
+.form-control {
+  padding: 12px;
+  width: 80%;
+}
+
+.search-box {
+  margin:2em auto;
+  position: relative;
+  padding: 0.5em 1.5em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  width: 40%;
+  height: 160px;
+}
+
+.search-box::before, .search-box::after {
+  content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: black;
+}
+
+.search-box::before {
+  left: 10px;
+}
+
+.search-box::after {
+  right: 10px;
+}
+
+.search-box > p {
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+.prefecture-name {
+  padding-bottom: 24px;
+}
+
+.prefecture-text {
+  padding-bottom: 16px;
+}
+
+.select-box {
+  font-size: 20px;
+  padding: 4px;
+  width: 40%;
+}
+
+.keyword-search-btn {
+  padding: 0 16px;
+  margin-top: 16px;
+}
+
+.prefecture-search-btn {
+  padding: 0 16px;
+  margin-top: 24px;
+}
+
+.bathing-fee-search-btn {
+  padding: 0 16px;
+  margin-top: 32px;
 }

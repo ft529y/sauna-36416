@@ -38,7 +38,7 @@
         都道府県
         <span><i class="fas fa-hot-tub"></i></span>
       </div>
-      <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, class:"new-select") %>
+      <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {include_blank: '---'}, class:"new-select") %>
     </div>
 
     <div class="new-stores">
