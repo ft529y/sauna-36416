@@ -2,12 +2,13 @@
 
 <%= search_form_for @p, url: searching_keyword_stores_path do |f| %>
   <div class="search-box-wrap">
-    <div class="keyword-box">
+    <div class="search-box">
       <p>キーワード検索</p>
+     <div>
       <%= f.search_field :store_name_or_description_cont, placeholder: "キーワードを入力して下さい", class: "form-control" %>
+     </div>
+      <%= f.submit '検索', class:"keyword-search-btn" %>
     </div>
-
-    <%= f.submit '検索', class:"search-btn" %>
   </div>
 <% end %>
 
