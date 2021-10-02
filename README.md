@@ -153,6 +153,17 @@ has_one_attached :image
 belongs_to :user
 belongs_to :store
 
+## eventsテーブル
+
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| execution  | integer    |                                |
+| place      | string     |                                |
+| fee        | integer    |                                |
+| start-time | datetime   |                                |
+| user       | references | null: false, foreign_key: true |
+
+
 # ローカルでの動作方法
 ```ターミナル
 % git clone https://github.com/ft529y/sauna-36416.git 
