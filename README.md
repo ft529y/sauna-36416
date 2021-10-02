@@ -96,6 +96,7 @@ password : B2b2b2
 
 has_many :comments
 has_many :stores
+has_one :event
 
 ## storesテーブル
 
@@ -162,6 +163,9 @@ belongs_to :store
 | fee        | integer    |                                |
 | start-time | datetime   |                                |
 | user       | references | null: false, foreign_key: true |
+
+### Asosiation
+belongs_to :user
 
 
 # ローカルでの動作方法
