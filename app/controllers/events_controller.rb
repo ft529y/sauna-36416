@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!, only: [:show, :new, :create]
+
   def show
     @events = Event.all
   end
@@ -8,14 +10,13 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(event_parameter)
-    if @event.save?
+    @event = Event.create(event_params)
       redirect_to root_path
-    end
   end
 end
 
 private
 
-def event_parameter
+def event_params
+  params.require(:event).permit(:place, :fee, :start_time).merge(user_id: current_user.id)
 end
