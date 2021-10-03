@@ -1,0 +1,7 @@
+<%= render "shared/header_logo" %>
+
+<%= link_to "イベント追加", new_event_path %>
+
+<%= month_calendar events: @events do |date, events| %>
+  <%= date.day %>
+<% end %>
