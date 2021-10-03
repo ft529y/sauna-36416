@@ -4,4 +4,12 @@
 
 <%= month_calendar events: @events do |date, events| %>
   <%= date.day %>
+
+  <% events.each do |event| %>
+    <div>
+      <%= event.place %>
+    </div>
+  <% end %>
+
+
 <% end %>
