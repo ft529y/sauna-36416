@@ -25,10 +25,6 @@
         </div>
       </header>
 
-      <% if user_signed_in? %>
-        <%= link_to "カレンダー", event_path(current_user.id) %>
-      <% end %>
-
       <div class="top-sauna-text">
         <h1 class="question">サウナについて知ろう！！<span class="small-question">(各文章をクリックすると詳細が表示されます。)</span></h1>
         <dl>
