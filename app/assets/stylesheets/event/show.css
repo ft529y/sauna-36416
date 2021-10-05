@@ -1,0 +1,14 @@
+.event-add {
+  width: 20%;
+  height: 32px;
+  line-height: 32px;
+  background-color: #55b1df;
+  border-radius: 30px;
+  margin: 32px auto;
+  text-align: center;
+}
+
+.post-btn-add {
+  text-decoration: none;
+  color: black;
+}
