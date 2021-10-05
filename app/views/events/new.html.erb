@@ -1,8 +1,12 @@
 <%= render "shared/header_logo" %>
 
-<h1>テスト</h1>
+<h1>予定を入力して下さい</h1>
 
 <%= form_with model: @event, local: true do |form| %>
+
+  <div>
+    <%= form.collection_select(:execution_id, Execution.all, :id, :name, {}, class:"event-new-select") %>
+  </div>
 
   <div class="place">
     <%= form.label :place %>
