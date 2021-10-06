@@ -1,31 +1,33 @@
 <%= render "shared/header_logo" %>
 
-<h1>予定を入力して下さい</h1>
+<div class="event-add-wrap">
+  <h1 class="event-add-top">予定を入力して下さい</h1>
 
-<%= form_with model: @event, local: true do |form| %>
+  <%= form_with model: @event, local: true do |form| %>
 
-  <div>
-    <%= form.collection_select(:execution_id, Execution.all, :id, :name, {}, class:"event-new-select") %>
-  </div>
+    <div>
+      <%= form.collection_select(:execution_id, Execution.all, :id, :name, {}, class:"event-new-select") %>
+    </div>
 
-  <div class="place">
-    <%= form.label :place %>
-    <%= form.text_field :place %>
-  </div>
+    <div class="place">
+      <%= form.label :place %>
+      <%= form.text_field :place %>
+    </div>
 
-  <div class="fee">
-    <%= form.label :fee %>
-    <%= form.text_field :fee %>
-  </div>
+    <div class="fee">
+      <%= form.label :fee %>
+      <%= form.text_field :fee %>
+    </div>
 
-    <div class="time">
-    <%= form.label :start_time %>
-    <%= form.datetime_select :start_time %>
-  </div>
+      <div class="time">
+      <%= form.label :start_time %>
+      <%= form.datetime_select :start_time %>
+    </div>
 
 
-  <div class="submit">
-    <%= form.submit %>
-  </div>
+    <div class="submit">
+      <%= form.submit %>
+    </div>
+</div>
 
 <% end %>
