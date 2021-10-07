@@ -6,24 +6,23 @@
 <%= month_calendar events: @events do |date, events| %>
   <%= date.day %>
 
-  <% events.each do |event| %>
+  <% if Event.exists? %>
+    <% events.each do |event| %>
+      <div>
+        <%= event.execution.name %>
+      </div>
 
-  <%# if presence %>
-    <%# <div> %>
-      <%# <%= event.execution.name %>
-    <%# </div> %>
-  <%# end %>
-  
-    <div>
-      <%= event.place %>
-    </div>
+      <div>
+        <%= event.place %>
+      </div>
 
-    <div>
-      <%= event.fee %>
-    </div>
+      <div>
+        <%= event.fee %>
+      </div>
 
-    <div>
-      <%= event.start_time %>
-    </div>
+      <div>
+        <%= event.start_time %>
+      </div>
+    <% end %>
   <% end %>
 <% end %>
