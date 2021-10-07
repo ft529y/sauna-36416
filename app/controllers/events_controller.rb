@@ -18,5 +18,5 @@ end
 private
 
 def event_params
-  params.require(:event).permit(:place, :fee, :start_time).merge(user_id: current_user.id)
+  params.require(:event).permit(:execution_id, :place, :fee, :start_time).merge(user_id: current_user.id)
 end
