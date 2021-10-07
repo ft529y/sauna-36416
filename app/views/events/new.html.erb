@@ -3,30 +3,32 @@
 <div class="event-add-wrap">
   <h1 class="event-add-top">予定を入力して下さい</h1>
 
-  <%= form_with model: @event, local: true do |form| %>
+  <%= form_with model: @event, local: true do |f| %>
+
+  <%= render 'shared/error_messages', model: f.object %>
 
     <div>
-      <%= form.collection_select(:execution_id, Execution.all, :id, :name, {}, class:"event-new-select") %>
+      <%= f.collection_select(:execution_id, Execution.all, :id, :name, {}, class:"event-new-select") %>
     </div>
 
     <div class="place">
-      <%= form.label :place %>
-      <%= form.text_field :place %>
+      <%= f.label :place %>
+      <%= f.text_field :place %>
     </div>
 
     <div class="fee">
-      <%= form.label :fee %>
-      <%= form.text_field :fee %>
+      <%= f.label :fee %>
+      <%= f.text_field :fee %>
     </div>
 
       <div class="time">
-      <%= form.label :start_time %>
-      <%= form.datetime_select :start_time %>
+      <%= f.label :start_time %>
+      <%= f.datetime_select :start_time %>
     </div>
 
 
     <div class="submit">
-      <%= form.submit %>
+      <%= f.submit %>
     </div>
 </div>
 
