@@ -1,19 +1,23 @@
-.event-add {
-  width: 20%;
-  height: 32px;
-  line-height: 32px;
-  background-color: #55b1df;
-  border-radius: 30px;
-  margin: 32px auto;
+.event-add  {
   text-align: center;
-  transition: 0.5s;
 }
 
-.event-add:hover {
+.event-add a {
+  display: inline-block;
+  width: 20%;
+  font-size: 24px;
+  line-height: 40px;
+  height: 40px;
+  background-color: #55b1df;
+  border-radius: 30px;
+}
+
+.event-add a:hover {
   background: white;
 }
 
 .post-btn-add {
   text-decoration: none;
   color: black;
+  transition: 0.5s;
 }
