@@ -12,6 +12,7 @@ require("channels")
 require('../preview')
 require('../top')
 require('../quiz')
+require('../slide')
 window.$ = window.jQuery = require('jquery');
 require('packs/raty')
 
