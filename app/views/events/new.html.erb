@@ -1,35 +1,51 @@
 <%= render "shared/header_logo" %>
 
+
+
+  <div class="event-add-text">
+    <h1 class="event-add-top">
+      <span>
+        予定を入力して下さい
+      </span>
+    </h1>
+    <p class="event-add-sentence">
+      <span>マイカレンダーに反映されます。</span>
+    </p>
+  </div>
+
+
+
 <div class="event-add-wrap">
-  <h1 class="event-add-top">予定を入力して下さい</h1>
 
-  <%= form_with model: @event, local: true do |f| %>
+  <div class="event-form-wrap">
+    <%= form_with model: @event, local: true do |f| %>
 
-  <%= render 'shared/error_messages', model: f.object %>
+    <%= render 'shared/error_messages', model: f.object %>
 
-    <div>
-      <%= f.collection_select(:execution_id, Execution.all, :id, :name, {}, class:"event-new-select") %>
-    </div>
+      <div>
+        <%= f.collection_select(:execution_id, Execution.all, :id, :name, {}, class:"event-new-select") %>
+      </div>
 
-    <div class="place">
-      <%= f.label :place %>
-      <%= f.text_field :place %>
-    </div>
+      <div class="place">
+        <%= f.label :place %>
+        <%= f.text_field :place %>
+      </div>
 
-    <div class="fee">
-      <%= f.label :fee %>
-      <%= f.text_field :fee %>
-    </div>
+      <div class="fee">
+        <%= f.label :fee %>
+        <%= f.text_field :fee %>
+      </div>
 
-      <div class="time">
-      <%= f.label :start_time %>
-      <%= f.datetime_select :start_time %>
-    </div>
+        <div class="time">
+        <%= f.label :start_time %>
+        <%= f.datetime_select :start_time %>
+      </div>
 
 
-    <div class="submit">
-      <%= f.submit %>
-    </div>
+      <div class="submit">
+        <%= f.submit %>
+      </div>
+  </div>
 </div>
 
 <% end %>
