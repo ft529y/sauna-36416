@@ -8,19 +8,19 @@
 
   <% if Event.exists? %>
     <% events.each do |event| %>
-      <div>
+      <div class="execution-indicate">
         <%= event.execution.name %>
       </div>
 
-      <div>
-        <%= event.place %>
+      <div class="place-indicate">
+        場所 : <%= event.place %>
       </div>
 
-      <div>
-        <%= event.fee %>
+      <div class="fee-indicate">
+        料金 : <%= event.fee %>円
       </div>
 
-      <div>
+      <div class="start-time-indicate">
         <%= event.start_time.to_s(:time_jp) %>から
       </div>
     <% end %>
