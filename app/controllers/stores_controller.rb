@@ -3,7 +3,9 @@ class StoresController < ApplicationController
   before_action :create_searching_keyword, only: [:list, :search_keyword, :searching_keyword]
   before_action :create_searching_prefecture, only: [:list, :search_prefecture, :searching_prefecture]
   before_action :create_searching_bathing_fee, only: [:list, :search_bathing_fee, :searching_bathing_fee]
-  before_action :search_result, only: [:search_keyword, :searching_keyword, :search_prefecture, :searching_prefecture, :search_bathing_fee, :searching_bathing_fee]
+  before_action :search_result,
+                only: [:search_keyword, :searching_keyword, :search_prefecture, :searching_prefecture, :search_bathing_fee,
+                       :searching_bathing_fee]
 
   def index
   end
