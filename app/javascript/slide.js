@@ -2,8 +2,8 @@ function slide() {
   const CLASSNAME = "-visible";
   const TIMEOUT = 1500;
   const DELAY = 100;
-  const $target1 = $(".event-add-top")
-  const $target2 = $(".event-add-sentence")
+  const $target1 = $()
+  const $target2 = $()
   
   setInterval(() => {
     $target1.addClass(CLASSNAME);
