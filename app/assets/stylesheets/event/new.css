@@ -11,6 +11,21 @@
   font-size: 24px;
 }
 
+.event-new-select {
+  margin: 24px;
+}
+
+.place {
+  margin: 24px;
+}
+
+.fee {
+  margin: 24px;
+}
+
+.time {
+  margin: 24px;
+}
 /* .event-add-top {
   font-size: 24px;
   overflow: hidden;
