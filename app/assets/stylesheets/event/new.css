@@ -11,6 +11,10 @@
   font-size: 24px;
 }
 
+.execution-text {
+  padding-top: 24px;
+}
+
 .event-new-select {
   margin: 24px;
 }
