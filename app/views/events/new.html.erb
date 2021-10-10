@@ -1,7 +1,6 @@
 <%= render "shared/header_logo" %>
 
-
-
+<div class="event-add-wrap">
   <div class="event-add-text">
     <h1 class="event-add-top">
       <span>
@@ -9,13 +8,9 @@
       </span>
     </h1>
     <p class="event-add-sentence">
-      <span>マイカレンダーに反映されます。</span>
+      <span>※設定項目を入力し「登録する」ボタンをクリックすると、マイカレンダーに反映されます。</span>
     </p>
   </div>
-
-
-
-<div class="event-add-wrap">
 
   <div class="event-form-wrap">
     <%= form_with model: @event, local: true do |f| %>
@@ -33,7 +28,7 @@
 
       <div class="fee">
         <%= f.label :fee %>
-        <%= f.text_field :fee %>
+        <%= f.text_field :fee %>円
       </div>
 
         <div class="time">
@@ -42,8 +37,8 @@
       </div>
 
 
-      <div class="submit">
-        <%= f.submit %>
+      <div class="store-btn">
+        <%= f.submit "登録する", class: "post-btn" %>
       </div>
   </div>
 </div>
