@@ -18,4 +18,5 @@ Rails.application.routes.draw do
       patch 'withdrawal'
     end
   end
+  resources :events, only: [:show, :new, :create]
 end

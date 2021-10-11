@@ -8,6 +8,7 @@
         <li class="show-list"><span><i class="fas fa-chevron-down"></i></span>
           <ul class="list-detail">
             <li class="list-single"><%= link_to "マイページ編集", edit_user_registration_path %></li>
+            <li class="list-single"><%= link_to "マイカレンダー", event_path(current_user.id) %></li>
             <li class="list-single"><%= link_to "コメント一覧", list_user_path(@user) %></li>
             <li class="list-single"><%= link_to "会員退会", unsubscribe_user_path(current_user.id) %></li>
           </ul>

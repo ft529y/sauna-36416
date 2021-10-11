@@ -1,0 +1,50 @@
+<%= render "shared/header_logo" %>
+
+<div class="event-add-wrap">
+  <div class="event-add-text">
+    <h1 class="event-add-top">
+      <span>
+        予定を入力して下さい
+      </span>
+    </h1>
+    <p class="event-add-sentence">
+      <span>※設定項目を入力し「登録する」ボタンをクリックすると、マイカレンダーに反映されます。</span>
+    </p>
+  </div>
+
+  <div class="event-form-wrap">
+    <%= form_with model: @event, local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+      <div class="execution-wrapper">
+        <p class="execution-text">選択して下さい</p>
+        <%= f.collection_select(:execution_id, Execution.all, :id, :name, {}, class:"new-select") %>
+      </div>
+
+      <div class="place-wrapper">
+        <div><%= f.label :place %></div>
+        <%= f.text_field :place, class: "place-new-field", placeholder: "目的の施設名を入力" %>
+      </div>
+
+      <div class="fee-wrapper">
+      <%= f.label :fee %>
+      <div class="fee-content">
+        <div><%= f.text_field :fee, class:"fee-new-field", placeholder:"1000" %></div>
+        <p>円</p>
+      </div>
+      </div>
+
+      <div class="time-wrapper">
+        <%= f.label :start_time %>
+        <div class="time-new-field"><%= f.datetime_select :start_time %></div>
+      </div>
+
+
+      <div class="store-btn">
+        <%= f.submit "登録する", class: "post-btn" %>
+      </div>
+  </div>
+</div>
+
+<% end %>

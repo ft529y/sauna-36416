@@ -1,0 +1,102 @@
+
+.event-add-wrap {
+  text-align: center;
+  background-color: white;
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+}
+
+.event-add-top {
+  font-size: 24px;
+}
+
+.execution-text {
+  padding-top: 24px;
+}
+
+.event-new-select {
+  margin: 24px;
+}
+
+.place-wrapper {
+  margin: 24px;
+}
+
+.place-new-field {
+  width: 50%;
+  padding: 16px;
+  font-size: 18px;
+  border: 1px solid #d3d3d3;
+  resize: none;
+  margin: 0 -16px;
+}
+
+.fee-wrapper {
+  margin: 24px;
+}
+
+.fee-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fee-new-field {
+  width: 75%;
+  padding: 16px;
+  font-size: 18px;
+  border: 1px solid #d3d3d3;
+  resize: none;
+  margin: 0 -16px;
+}
+
+.time-wrapper {
+  margin: 24px;
+}
+
+.time-new-field {
+  padding: 16px;
+}
+
+
+
+
+/* .event-add-top {
+  font-size: 24px;
+  overflow: hidden;
+  transform: translate(-100%, 0);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1)0.5s;
+  color: #aa8f7b;
+}
+
+.event-add-top span {
+  display: block;
+  transform: translate(100%, 0);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1)0.5s;
+}
+
+.event-add-top.-visible,
+.event-add-top.-visible span {
+  transform: translate(0, 0);
+}
+
+.event-add-sentence {
+  overflow: hidden;
+  transform: translate(-100%, 0);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+  font-family: "Yu Gothic Medium";
+  font-size: 16px;
+  text-align: center;
+}
+
+.event-add-sentence span {
+  display: block;
+  transform: translate(100%, 0);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+
+.event-add-sentence.-visible,
+.event-add-sentence.-visible span {
+  transform: translate(0, 0);
+} */

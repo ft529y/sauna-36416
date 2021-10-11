@@ -96,6 +96,7 @@ password : B2b2b2
 
 has_many :comments
 has_many :stores
+has_one :event
 
 ## storesテーブル
 
@@ -104,15 +105,15 @@ has_many :stores
 | store_name      | string     | null: false                    |
 | description     | text       | null: false                    |
 | user            | references | null: false, foreign_key: true |
-| address         | string     | null: false                    |
-| building_name   | string     |                                |
-| phone_number    | string     | null: false                    |
-| bathing_fee     | integer    | null: false                    |
 | sauna_temp      | integer    | null: false                    |
 | water_temp      | integer    | null: false                    |
-| prefecture_id   | integer    | null: false                    |
 | rouryu_id       | integer    | null: false                    |
 | outside_bath_id | integer    | null: false                    |
+| break_space_id  | integer   | null: false                  |
+| bathing_fee     | integer    | null: false                    |
+| prefecture_id   | integer    | null: false                    |
+| address         | string     | null: false                    |
+| phone_number    | string     | null: false                    |
 
 
 ### Association
@@ -152,6 +153,20 @@ has_one_attached :image
 ### Association
 belongs_to :user
 belongs_to :store
+
+## eventsテーブル
+
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| execution  | integer    | null: false                    |
+| place      | string     |                                |
+| fee        | integer    |                                |
+| start-time | datetime   |                                |
+| user       | references | null: false, foreign_key: true |
+
+### Association
+belongs_to :user
+
 
 # ローカルでの動作方法
 ```ターミナル

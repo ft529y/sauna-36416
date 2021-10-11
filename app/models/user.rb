@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :stores
   has_many :comments
+  has_one :event
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

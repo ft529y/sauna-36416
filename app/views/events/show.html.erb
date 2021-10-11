@@ -1,0 +1,31 @@
+<%= render "shared/header_logo" %>
+
+<div class="event-add">
+  <%= link_to "イベント追加", new_event_path, class: 'post-btn-add' %>
+</div>
+<%= month_calendar events: @events do |date, events| %>
+  <%= date.day %>
+
+  <% if Event.exists? %>
+    <% events.each do |event| %>
+      <% if event.user_id == current_user.id %>
+        <div class="execution-indicate">
+          <%= event.execution.name %>
+        </div>
+
+        <div class="place-indicate">
+          場所 : <%= event.place %>
+        </div>
+
+        <div class="fee-indicate">
+          料金 : <%= event.fee %>円
+        </div>
+
+        <div class="start-time-indicate">
+          <%= event.start_time.to_s(:time_jp) %>から
+        </div>
+
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
