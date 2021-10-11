@@ -28,3 +28,6 @@ ja:
       comment:
         text: 文章
         evaluation: 評価
+
+      event:
+        execution_id: 実施予定
