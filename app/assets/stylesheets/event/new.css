@@ -3,7 +3,7 @@
   text-align: center;
   background-color: white;
   width: 70%;
-  height: 50%;
+  height: 70%;
   margin: 0 auto;
 }
 
@@ -19,17 +19,49 @@
   margin: 24px;
 }
 
-.place {
+.place-wrapper {
   margin: 24px;
 }
 
-.fee {
+.place-new-field {
+  width: 50%;
+  padding: 16px;
+  font-size: 18px;
+  border: 1px solid #d3d3d3;
+  resize: none;
+  margin: 0 -16px;
+}
+
+.fee-wrapper {
   margin: 24px;
 }
 
-.time {
+.fee-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fee-new-field {
+  width: 75%;
+  padding: 16px;
+  font-size: 18px;
+  border: 1px solid #d3d3d3;
+  resize: none;
+  margin: 0 -16px;
+}
+
+.time-wrapper {
   margin: 24px;
 }
+
+.time-new-field {
+  padding: 16px;
+}
+
+
+
+
 /* .event-add-top {
   font-size: 24px;
   overflow: hidden;
