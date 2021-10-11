@@ -17,23 +17,27 @@
 
     <%= render 'shared/error_messages', model: f.object %>
 
-      <div>
-        <%= f.collection_select(:execution_id, Execution.all, :id, :name, {}, class:"event-new-select") %>
+      <div class="execution-wrapper">
+        <p class="execution-text">選択して下さい</p>
+        <%= f.collection_select(:execution_id, Execution.all, :id, :name, {}, class:"new-select") %>
       </div>
 
-      <div class="place">
-        <%= f.label :place %>
-        <%= f.text_field :place %>
+      <div class="place-wrapper">
+        <div><%= f.label :place %></div>
+        <%= f.text_field :place, class: "place-new-field", placeholder: "目的の施設名を入力" %>
       </div>
 
-      <div class="fee">
-        <%= f.label :fee %>
-        <%= f.text_field :fee %>円
+      <div class="fee-wrapper">
+      <%= f.label :fee %>
+      <div class="fee-content">
+        <div><%= f.text_field :fee, class:"fee-new-field", placeholder:"1000" %></div>
+        <p>円</p>
+      </div>
       </div>
 
-        <div class="time">
+      <div class="time-wrapper">
         <%= f.label :start_time %>
-        <%= f.datetime_select :start_time %>
+        <div class="time-new-field"><%= f.datetime_select :start_time %></div>
       </div>
 
 
