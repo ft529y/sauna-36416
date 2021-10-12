@@ -128,14 +128,15 @@ margin: 0 auto;
   border: 1px solid #55b1df;
   color: white;
   border-radius: 30px;
-  width: 50%;
+  width: 30%;
+  height: 40px;
   cursor: pointer;
   font-size: 20px;
   margin: 0 auto;
 }
 
 .back-btn {
-  width: 30%;
+  width: 24%;
   margin: 0 auto;
   margin-top: 16px;
   color: black;
