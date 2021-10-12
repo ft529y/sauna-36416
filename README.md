@@ -56,6 +56,9 @@ password : B2b2b2
 - 3択クイズ機能
 [![Image from Gyazo](https://i.gyazo.com/5f8f0e4c143706ccb9126d12eaca573d.gif)](https://gyazo.com/5f8f0e4c143706ccb9126d12eaca573d)
 
+- カレンダー機能
+[![Image from Gyazo](https://i.gyazo.com/b9abdbb1c301d31db9fadab06ae9ace8.gif)](https://gyazo.com/b9abdbb1c301d31db9fadab06ae9ace8)
+
 # 工夫したポイント
 - コメント機能だけでなく、星形の段階評価を実装することでより、評価をわかりやす
 くした。
