@@ -70,7 +70,8 @@ password : B2b2b2
 
 # データベース設計
 ### ER図
-![saunau](https://user-images.githubusercontent.com/87511321/134636803-cfce73d7-b044-430f-a12f-10694a9ab6a9.png)
+![sauna-er](https://user-images.githubusercontent.com/87511321/136897856-fc438368-781e-4602-89b8-bec88f48054e.png)
+
 
 
 
