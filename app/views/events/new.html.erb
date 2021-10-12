@@ -23,12 +23,12 @@
       </div>
 
       <div class="place-wrapper">
-        <div><%= f.label :place %></div>
+        <div><%= f.label :place, "場所を入力して下さい" %></div>
         <%= f.text_field :place, class: "place-new-field", placeholder: "目的の施設名を入力" %>
       </div>
 
       <div class="fee-wrapper">
-      <%= f.label :fee %>
+      <%= f.label :fee, "料金を入力して下さい" %>
       <div class="fee-content">
         <div><%= f.text_field :fee, class:"fee-new-field", placeholder:"1000" %></div>
         <p>円</p>
@@ -36,7 +36,7 @@
       </div>
 
       <div class="time-wrapper">
-        <%= f.label :start_time %>
+        <%= f.label :start_time, "開始時刻を選択して下さい" %>
         <div class="time-new-field"><%= f.datetime_select :start_time %></div>
       </div>
 
