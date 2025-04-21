@@ -8,6 +8,7 @@
 
 # URL
 - https://sauna-36416.herokuapp.com/
+  (現在サーバー停止状態のためログインすることはできません。ご了承下さい。)
 
 # 本番環境
 - Basic ID : admin  
